@@ -1,0 +1,64 @@
+﻿@model PlayerLoto.Domain.DrawingResult
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DrawingResult</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pick3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pick3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pick4First)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pick4First)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pick4Second)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pick4Second)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,161 @@
+﻿@model PlayerLoto.MVC.Models.DrawingResultFilter
+
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <input type="submit" value="Filter" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.Pick3Hundred, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EnumDropDownListFor(model => model.Pick3Hundred, htmlAttributes: new { @class = "form-control" })
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.Pick3Tens, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Pick3Tens, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.Pick4, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Pick4, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.DrawingState, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EnumDropDownListFor(model => model.DrawingState, htmlAttributes: new { @class = "form-control" })
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.InitialDate, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.InitialDate, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.FinalDate, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.FinalDate, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DrawingResults[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DrawingResults[0].Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DrawingResults[0].Pick3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DrawingResults[0].Pick4First)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DrawingResults[0].Pick4Second)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.DrawingResults)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pick3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pick4First)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pick4Second)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+}
+
