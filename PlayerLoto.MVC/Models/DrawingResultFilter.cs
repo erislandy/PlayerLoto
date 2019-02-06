@@ -30,7 +30,7 @@ namespace PlayerLoto.MVC.Models
         public DateTime FinalDate { get; set; }
 
         [Display(Name = "Fijo centena")]
-        public int Pick3Hundred { get; set; }
+        public int? Pick3Hundred { get; set; }
 
         [Display(Name = "Fijo dentena")]
         public int? Pick3Tens { get; set; }
