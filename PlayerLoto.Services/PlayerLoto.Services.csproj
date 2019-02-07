@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,6 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DrawingResultManager.cs" />
+    <Compile Include="FilterOperation\DrawingResultFilterByDate.cs" />
+    <Compile Include="FilterOperation\DrawingResultFilterByParameter.cs" />
+    <Compile Include="FilterOperation\DrawingResultFilterByType.cs" />
+    <Compile Include="FilterOperation\enums.cs" />
+    <Compile Include="FilterOperation\IDrawingResultFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

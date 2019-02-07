@@ -12,81 +12,42 @@ using PlayerLoto.Domain;
 using PlayerLoto.Domain.Interfaces;
 using PlayerLoto.MVC.Models;
 using PlayerLoto.Services;
+using PlayerLoto.Services.FilterOperation;
 
 namespace PlayerLoto.MVC.Controllers
 {
     public class DrawingResultsController : Controller
     {
         IRepository _repository;
-        ISessionFactory _seccionfactory;
-        IDrawingResultManager _drawingResultManager;
+        //IDrawingResultManager _drawingResultManager;
 
-        public DrawingResultsController()
+        public DrawingResultsController(IRepository repository)
         {
-            _seccionfactory = new SessionFactory();
-            _repository = new Repository(_seccionfactory);
-            _drawingResultManager = new DrawingResultManager(_repository);
+            _repository = repository;
         }
 
         // GET: DrawingResults
         public ActionResult Index()
         {
             DrawingResultFilter view = new DrawingResultFilter();
-            
 
-            var list  = _repository.GetList<DrawingResult>(
-                                                    d => d.Date >= view.InitialDate && 
-                                                    d.Date <= view.FinalDate)
-                                                    .ToList();
+            IDrawingResultFilter filter = new DrawingResultFilterByDate(_repository, view.InitialDate, view.FinalDate);
+            view.DrawingResults = filter.Filter();
 
-
-            foreach (var drawing in list)
-            {
-                view.DrawingResults.Add(drawing);
-            }
             return View(view);
         }
 
         [HttpPost]
         public ActionResult Index(DrawingResultFilter drawing)
         {
-            var list = new List<DrawingResult>();
-            switch (drawing.DrawingState)
-            {
-                case DrawingState.All:
-                    {
-                        list = _repository.GetList<DrawingResult>(
-                                                    d => d.Date >= drawing.InitialDate && 
-                                                    d.Date <= drawing.FinalDate)
-                                                    .ToList();
+            IDrawingResultFilter filter = new DrawingResultFilterByDate(
+                                                            _repository,
+                                                            drawing.InitialDate, drawing.FinalDate);
+            var filterParameter = new DrawingResultFilterByParameter(filter, drawing.Parameter);
 
-                        break;
-                    }
-                case DrawingState.Midday:
-                    {
-                        list = _repository.GetList<DrawingResult>(
-                                                    d => d.Date >= drawing.InitialDate &&
-                                                    d.Date <= drawing.FinalDate &&
-                                                    d.Type == DrawType.Midday)
-                                                    .ToList();
-                        break;
-                    }
-                case DrawingState.Evening:
-                    {
-                        list = _repository.GetList<DrawingResult>(
-                                                    d => d.Date >= drawing.InitialDate &&
-                                                    d.Date <= drawing.FinalDate &&
-                                                    d.Type == DrawType.Evening)
-                                                    .OrderByDescending(d => d.Date)
-                                                    .ToList(); break;
-                    }
-            }
+            var filterType = new DrawingResultFilterByType(filterParameter, drawing.DrawingState);
 
-            drawing.DrawingResults.Clear();
-            foreach (var view in list)
-            {
-                drawing.DrawingResults.Add(view);
-            }
+            drawing.DrawingResults = filterType.Filter();
 
             return View(drawing);
         }
@@ -188,7 +149,7 @@ namespace PlayerLoto.MVC.Controllers
         {
             if (disposing)
             {
-                (_seccionfactory.CurrentUoW.Orm as DbContext).Dispose();
+                (_repository.UoW.Orm as DbContext).Dispose();
             }
             base.Dispose(disposing);
         }

@@ -1,4 +1,6 @@
-﻿using PlayerLoto.Domain;
+﻿using PlayerLoto.Data;
+using PlayerLoto.Domain;
+using PlayerLoto.Services.FilterOperation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,7 +17,7 @@ namespace PlayerLoto.MVC.Models
             DrawingState = DrawingState.All;
             InitialDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             FinalDate = DateTime.Now;
-            Pick3Hundred = null;
+            Parameter = null;
         }
 
         [Display(Name = "Tiro")]
@@ -29,21 +31,17 @@ namespace PlayerLoto.MVC.Models
         [DataType(DataType.Date)]
         public DateTime FinalDate { get; set; }
 
-        [Display(Name = "Fijo centena")]
-        public int? Pick3Hundred { get; set; }
+        [Display(Name = "Parametro")]
+        public int? Parameter { get; set; }
 
-        [Display(Name = "Fijo dentena")]
-        public int? Pick3Tens { get; set; }
+        [Display(Name = "Tipo de parametro")]
+        public ParameterType ParameterType { get; set; }
 
-        [Display(Name = "Corrido")]
-        public int? Pick4 { get; set; }
 
         public List<DrawingResult> DrawingResults { get; set; }
 
+       
     }
-
-    public enum DrawingState
-    {
-        Midday, Evening, All
-    }
+    
+    
 }
