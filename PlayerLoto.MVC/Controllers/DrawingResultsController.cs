@@ -43,7 +43,7 @@ namespace PlayerLoto.MVC.Controllers
             IDrawingResultFilter filter = new DrawingResultFilterByDate(
                                                             _repository,
                                                             drawing.InitialDate, drawing.FinalDate);
-            var filterParameter = new DrawingResultFilterByParameter(filter, drawing.Parameter);
+            var filterParameter = new DrawingResultFilterByParameter(filter, drawing.Parameter, drawing.ParameterType);
 
             var filterType = new DrawingResultFilterByType(filterParameter, drawing.DrawingState);
 

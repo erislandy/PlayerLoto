@@ -78,5 +78,8 @@ namespace PlayerLoto.ServiceTest
             Assert.AreEqual(766, drawExpectedEve.Pick3);
 
         }
+
+       
+
     }
 }
