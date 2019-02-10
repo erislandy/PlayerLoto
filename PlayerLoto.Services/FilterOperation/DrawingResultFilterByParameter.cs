@@ -31,6 +31,7 @@ namespace PlayerLoto.Services.FilterOperation
                     case ParameterType.FijoCentena:
                         {
                             list.RemoveAll(d => d.Pick3 != _parameter);
+                            listResult = list;
                             break;
                         }
                     case ParameterType.FijoDecena:
@@ -59,6 +60,10 @@ namespace PlayerLoto.Services.FilterOperation
                 }
                
 
+            }
+            else
+            {
+                listResult = list;
             }
             return listResult;
         }
