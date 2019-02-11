@@ -50,6 +50,8 @@
     <Compile Include="FilterOperation\enums.cs" />
     <Compile Include="FilterOperation\IDrawingResultFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeekResult.cs" />
+    <Compile Include="WeekResultManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PlayerLoto.Data\PlayerLoto.Data.csproj">

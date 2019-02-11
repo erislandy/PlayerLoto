@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="DrawingResultManagerFixure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeekResultFixure.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

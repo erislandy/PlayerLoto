@@ -31,10 +31,10 @@ namespace PlayerLoto.MVC.Models
         [DataType(DataType.Date)]
         public DateTime FinalDate { get; set; }
 
-        [Display(Name = "Parametro")]
+        [Display(Name = "Parámetro")]
         public int? Parameter { get; set; }
 
-        [Display(Name = "Tipo de parametro")]
+        [Display(Name = "Tipo de parámetro")]
         public ParameterType ParameterType { get; set; }
 
 

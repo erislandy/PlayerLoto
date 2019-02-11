@@ -26,6 +26,39 @@ namespace PlayerLoto.MVC.Controllers
             _repository = repository;
         }
 
+        public ActionResult WeekResult()
+        {
+            WeekResultFilter weekFilter = new WeekResultFilter();
+           
+            DrawingState state = (DrawingState)Enum.Parse(typeof(DrawingState), weekFilter.DrawType.ToString());
+            IDrawingResultFilter filterByDate = new DrawingResultFilterByDate(_repository, weekFilter.InitialDate, weekFilter.FinalDate);
+            IDrawingResultFilter filter = new DrawingResultFilterByType(filterByDate, state);
+            var list = filter.Filter();
+
+            
+            WeekResultManager manager = new WeekResultManager();
+            weekFilter.WeekResultList = manager.CreateWeekResult(list);
+            return View(weekFilter);
+        }
+
+        [HttpPost]
+        public ActionResult WeekResult(WeekResultFilter weekFilter)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(weekFilter);
+            }
+            DrawingState state = (DrawingState)Enum.Parse(typeof(DrawingState), weekFilter.DrawType.ToString());
+            IDrawingResultFilter filterByDate = new DrawingResultFilterByDate(_repository, weekFilter.InitialDate, weekFilter.FinalDate);
+            IDrawingResultFilter filter = new DrawingResultFilterByType(filterByDate, state);
+            var list = filter.Filter();
+
+
+            WeekResultManager manager = new WeekResultManager();
+            weekFilter.WeekResultList = manager.CreateWeekResult(list);
+            return View(weekFilter);
+
+        }
         // GET: DrawingResults
         public ActionResult Index()
         {
