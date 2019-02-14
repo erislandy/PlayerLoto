@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlayerLoto.Mobile.Views.DrawingResultView"
+             xmlns:prism ="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             xmlns:converters="clr-namespace:PlayerLoto.Mobile.Converters"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DateConverter x:Key="DateConverter"/>
+            <converters:TypeConverter x:Key="TypeConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid BackgroundColor="{StaticResource MainColor}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Text="Tiro" FontAttributes="Bold"
+                                     Grid.Column="0" TextColor="White" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="Fecha" FontAttributes="Bold"
+                                    Grid.Column="1" TextColor="White" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="Fijo"  FontAttributes="Bold"
+                                    Grid.Column="2"  TextColor="White" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="Corr1" FontAttributes="Bold"
+                                    Grid.Column="3" TextColor="White" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="Corr2" FontAttributes="Bold"
+                                    Grid.Column="4" TextColor="White" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+            <ListView
+                HasUnevenRows="True"
+                ItemsSource="{Binding DrawingResultList}">
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior
+                        EventName="ItemTapped"
+                        Command="{Binding ItemTappedCommand}"
+                        EventArgsParameterPath="Item">
+
+                    </behaviors:EventToCommandBehavior>
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="2">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                               </Grid.RowDefinitions>
+
+
+
+                                <Image HeightRequest="30" WidthRequest="30"
+                                       Source="{Binding Type, Converter={StaticResource TypeConverter}}">
+                                    
+                                </Image>
+
+                                <Label 
+                                    FontSize="14"
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="{Binding Date, Converter={StaticResource DateConverter}}"
+                                    TextColor="{StaticResource FontColor}"
+                                    VerticalOptions="CenterAndExpand">
+                                </Label>
+
+                                <Label 
+                                    FontSize="14"
+                                    Grid.Column="2"
+                                    Grid.Row="0"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="{Binding Pick3}"
+                                    TextColor="{StaticResource FontColor}"
+                                    VerticalOptions="CenterAndExpand">
+                                </Label>
+
+                                <Label 
+                                    FontSize="14"
+                                    Grid.Column="3"
+                                    Grid.Row="0"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="{Binding Pick4First}"
+                                    TextColor="{StaticResource FontColor}"
+                                    VerticalOptions="CenterAndExpand">
+                                </Label>
+                                <Label 
+                                    FontSize="14"
+                                    Grid.Column="4"
+                                    Grid.Row="0"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="{Binding Pick4First}"
+                                    TextColor="{StaticResource FontColor}"
+                                    VerticalOptions="CenterAndExpand">
+                                </Label>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+               
+            </ListView>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,4 +1,5 @@
-﻿using Prism;
+﻿using PlayerLoto.Mobile.Views;
+using Prism;
 using Prism.Ioc;
 using Prism.Unity;
 using System;
@@ -15,7 +16,7 @@ namespace PlayerLoto.Mobile
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            var result = await NavigationService.NavigateAsync("DrawingResultView");
 
             if (!result.Success)
             {
@@ -27,6 +28,7 @@ namespace PlayerLoto.Mobile
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<DrawingResultView>();
         }
 
        

@@ -4,6 +4,14 @@
              xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
              x:Class="PlayerLoto.Mobile.App">
     <Application.Resources>
+        <ResourceDictionary>
 
+            <!-- Colors -->
+            <Color x:Key="MainColor">#488f31</Color>
+            <Color x:Key="BackgroundColor">#80afa0</Color>
+            <Color x:Key="FontColor">#52656b</Color>
+            <Color x:Key="AccentColor">#de425b</Color>
+
+        </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>
