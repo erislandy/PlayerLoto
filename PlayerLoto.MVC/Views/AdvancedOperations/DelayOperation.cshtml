@@ -1,0 +1,107 @@
+﻿@model PlayerLoto.MVC.Models.DelayFilter
+
+<h2>Delay Operation</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <input type="submit" value="Filter" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.DrawType, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EnumDropDownListFor(model => model.DrawType, htmlAttributes: new { @class = "form-control" })
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.InitialDate, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.InitialDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.InitialDate, "", new { @class = "text-danger" })
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.FinalDate, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.FinalDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FinalDate, "", new { @class = "text-danger" })
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DrawType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DelayList[0].DrawingResult.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DelayList[0].DrawingResult.Pick3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DelayList[0].Days)
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model.DelayList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DrawingResult.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DrawingResult.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DrawingResult.Pick3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Days)
+                </td>
+                
+            </tr>
+        }
+
+    </table>
+
+}

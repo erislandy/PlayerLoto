@@ -12,26 +12,31 @@ namespace PlayerLoto.Mobile
     public partial class App : PrismApplication
     {
         public App(IPlatformInitializer initializer = null) : base(initializer) { }
-        protected override async void OnInitialized()
+        protected override void OnInitialized()
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync("DrawingResultView");
+            NavigationService.NavigateAsync(nameof(MasterView));
+            /*
 
             if (!result.Success)
             {
-        //        SetMainPageFromException(result.Exception);
+              await  App.Current.MainPage.DisplayAlert("Error", result.Exception.Message, "Cancel");
+        
             }
+            */
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
             containerRegistry.RegisterForNavigation<DrawingResultView>();
+            containerRegistry.RegisterForNavigation<MasterView>();
+           
+
         }
 
-       
+
 
         protected override void OnStart()
         {

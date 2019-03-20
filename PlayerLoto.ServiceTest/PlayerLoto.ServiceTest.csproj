@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedOperationTest.cs" />
     <Compile Include="DrawingResultManagerFixure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeekResultFixure.cs" />

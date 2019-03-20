@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedOperation.cs" />
     <Compile Include="DrawingResultManager.cs" />
     <Compile Include="FilterOperation\DrawingResultFilterByDate.cs" />
     <Compile Include="FilterOperation\DrawingResultFilterByParameter.cs" />

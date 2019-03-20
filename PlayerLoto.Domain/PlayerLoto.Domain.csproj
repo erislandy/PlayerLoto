@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delay.cs" />
     <Compile Include="DrawingResult.cs" />
+    <Compile Include="Interfaces\IAdvancedOperation.cs" />
     <Compile Include="Interfaces\IDrawingResultManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

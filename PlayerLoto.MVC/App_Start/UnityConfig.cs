@@ -1,5 +1,7 @@
 using PlayerLoto.Data;
 using PlayerLoto.DataEF;
+using PlayerLoto.Domain.Interfaces;
+using PlayerLoto.Services;
 using System.Web.Mvc;
 using Unity;
 using Unity.Mvc5;
@@ -14,6 +16,7 @@ namespace PlayerLoto.MVC
 
             container.RegisterType<ISessionFactory, SessionFactory>();
             container.RegisterType<IRepository, Repository>();
+            container.RegisterType<IAdvancedOperation, AdvancedOperation>();
 
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
