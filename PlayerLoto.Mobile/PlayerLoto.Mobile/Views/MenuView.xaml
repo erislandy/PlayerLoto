@@ -6,49 +6,54 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
              Title="Master">
-  <StackLayout
+    <StackLayout
       BackgroundColor="{StaticResource BackgroundColor}">
-    <ListView x:Name="MenuItemsListView"
+        <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MyMenu}">
-      <ListView.Header>
-      <Grid BackgroundColor="{StaticResource AccentColor}">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="10"/>
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
-          </Grid.RowDefinitions>
-          <Label
+            <ListView.Header>
+                <Grid BackgroundColor="{StaticResource AccentColor}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <Label
               Grid.Column="1"
               Grid.Row="2"
               Text="Player Lotto"
               FontSize="18"
-              TextColor="{StaticResource BackgroundColor}"/>
-        </Grid>
-      </ListView.Header>
-      <ListView.ItemTemplate>
+              TextColor="{StaticResource BackgroundColor}"
+              HorizontalOptions="CenterAndExpand"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid
                             >
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="3*"/>
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
                             <Label 
                                     Grid.Column="0"  
                                     HeightRequest="32"
                                     Text="{Binding Letter}"
                                     FontSize="30"
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Center"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center"
                                 >
                             </Label>
                             <Label 
@@ -56,13 +61,14 @@
                                     Text="{Binding Title}"
                                     TextColor="{StaticResource FontColor}" 
                                     FontSize="16"
-                                    VerticalOptions="Center"
-                                    HorizontalOptions="Start">
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="Start"
+                                >
                             </Label>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>
+        </ListView>
+    </StackLayout>
 </ContentPage>

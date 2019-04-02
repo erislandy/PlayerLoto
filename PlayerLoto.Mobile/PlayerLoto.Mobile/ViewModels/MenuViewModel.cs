@@ -39,7 +39,10 @@ namespace PlayerLoto.Mobile.ViewModels
               new Menu(){ Title = "Diario", TargetPage="StockView"},
               new Menu(){ Title = "Semanal", TargetPage="InputListView"},
               new Menu(){ Title = "Mensual", TargetPage="PayListView"},
-              new Menu(){ Title = "Anual", TargetPage="ManagerView"}
+              new Menu(){ Title = "Anual", TargetPage="ManagerView"},
+              new Menu(){ Title = "Generar", TargetPage="GenerarView"},
+              new Menu(){ Title = "Probabilidad", TargetPage="ProbabilidadView"},
+              new Menu(){ Title = "Jugar", TargetPage="JugarView"}
             };
             MyMenu = new ObservableCollection<Menu>(_menuList);
             _navigationService = navigationService;

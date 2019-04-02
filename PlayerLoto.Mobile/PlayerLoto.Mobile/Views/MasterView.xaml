@@ -7,7 +7,9 @@
     <pages:MenuView x:Name="MasterPage" />
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
-    <NavigationPage>
+    <NavigationPage
+        BarBackgroundColor="{StaticResource FontColor}"
+        BarTextColor="{StaticResource BackgroundColor}">
       <x:Arguments>
         <pages:DetailView />
       </x:Arguments>

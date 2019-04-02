@@ -13,6 +13,14 @@ namespace PlayerLoto.Mobile.ModelsUI
         public string Description { get; set; }
         public string TargetPage { get; set; }
 
+        public string Letter
+        {
+            get
+            {
+                return Name.Substring(0, 1);
+            }
+
+        }
         #endregion
 
 
