@@ -102,7 +102,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\florida_lotto.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PlayerLoto.Mobile\PlayerLoto.Mobile.csproj">
       <Project>{08184E8D-F4EE-43B1-BBFD-C3FBB6845243}</Project>
