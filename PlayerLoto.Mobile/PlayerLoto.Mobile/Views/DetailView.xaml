@@ -8,7 +8,9 @@
              Title="Player Loto">
     
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout
+            Spacing="0">
+            
             <ListView
                 BackgroundColor="{StaticResource BackgroundColor}"
                 HasUnevenRows="True"
@@ -36,8 +38,10 @@
                                     Text="{Binding Letter}"
                                     FontSize="30"
                                     VerticalOptions="FillAndExpand"
-                                    HorizontalOptions="CenterAndExpand"
+                                    HorizontalOptions="FillAndExpand"
                                     VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    BackgroundColor="{StaticResource MainColor}"
                                 >
                                 </Label>
                                 <StackLayout
@@ -75,6 +79,35 @@
                 </ListView.ItemTemplate>
 
             </ListView>
+            <Grid
+                HeightRequest="70"
+                BackgroundColor="{StaticResource FontColor}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Button
+                    CornerRadius="20"
+                    HeightRequest="40"
+                    Grid.Column="0"
+                    Margin="10,5,5,5"
+                    Text="Actualizar"
+                    TextColor="{StaticResource FontColor}"
+                    BackgroundColor="{StaticResource MainColor}">
+                </Button>
+           
+                <Button
+                    CornerRadius="20"
+                    HeightRequest="40"
+                    Grid.Column="1"
+                    Margin="5,5,10,5"
+                    Text="Contáctenos"
+                    TextColor="{StaticResource FontColor}"
+                    BackgroundColor="{StaticResource MainColor}">
+                </Button>
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -61,12 +61,12 @@ namespace PlayerLoto.Mobile.ViewModels
                 {
                     Name = "Generar",
                     Description ="Puedes generar en 3 ocasiones números probables a salir en el dia.",
-                    TargetPage="GenerarView"
+                    TargetPage="GenerateView"
                 },
                 new Option()
                 {
-                    Name = "Probilidad",
-                    Description ="Números probables en el mes",
+                    Name = "Estadística",
+                    Description ="Números probables en el mes, Números mas demorados en salir",
                     TargetPage="ProbabilidadView"
                 },
                 new Option()
