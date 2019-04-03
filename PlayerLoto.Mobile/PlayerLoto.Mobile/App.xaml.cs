@@ -1,10 +1,12 @@
 ﻿using PlayerLoto.Mobile.Views;
 using Prism;
 using Prism.Ioc;
+using Prism.Modularity;
 using Prism.Unity;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace PlayerLoto.Mobile
@@ -29,13 +31,29 @@ namespace PlayerLoto.Mobile
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<MainPage>();
             containerRegistry.RegisterForNavigation<DrawingResultView>();
             containerRegistry.RegisterForNavigation<MasterView>();
-           
+         
 
         }
 
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        {
+            Type queryDRModule = typeof(QueryDrawingResultsModule.ModuleDefinitions.Module);
+
+            moduleCatalog.AddModule(
+                    new ModuleInfo()
+                    {
+                        ModuleName = queryDRModule.Name,
+                        ModuleType = queryDRModule,
+                        InitializationMode = InitializationMode.WhenAvailable
+
+                    }
+                );
+            
+             base.ConfigureModuleCatalog(moduleCatalog);
+
+        }
 
 
         protected override void OnStart()

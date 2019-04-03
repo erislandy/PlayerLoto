@@ -23,6 +23,7 @@ namespace PlayerLoto.Mobile.ViewModels
         }
 
         #endregion
+
         #region Constructors
         public DrawingResultViewModel()
         {

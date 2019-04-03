@@ -20,6 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\QueryDrawingResultsModule\QueryDrawingResultsModule.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\DetailView.xaml.cs">
       <DependentUpon>DetailView.xaml</DependentUpon>
     </Compile>

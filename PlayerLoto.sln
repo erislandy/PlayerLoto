@@ -29,7 +29,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLoto.ServiceTest", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLoto.Mobile.Android", "PlayerLoto.Mobile\PlayerLoto.Mobile.Android\PlayerLoto.Mobile.Android.csproj", "{F8FD1FC7-311D-44AB-8F0C-97E3D8FE0A0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLoto.Mobile", "PlayerLoto.Mobile\PlayerLoto.Mobile\PlayerLoto.Mobile.csproj", "{AD34F144-52DA-4481-990D-C6EFF2E48A4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayerLoto.Mobile", "PlayerLoto.Mobile\PlayerLoto.Mobile\PlayerLoto.Mobile.csproj", "{AD34F144-52DA-4481-990D-C6EFF2E48A4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{F3469328-F1DB-4A64-9572-B9BEEE017A87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryDrawingResultsModule", "QueryDrawingResultsModule\QueryDrawingResultsModule.csproj", "{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,10 @@ Global
 		{AD34F144-52DA-4481-990D-C6EFF2E48A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD34F144-52DA-4481-990D-C6EFF2E48A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD34F144-52DA-4481-990D-C6EFF2E48A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +92,8 @@ Global
 		{573B1EBB-1FFC-4E5A-8342-430683173200} = {BBE40996-5684-433E-B649-0DE5EC47DC20}
 		{F8FD1FC7-311D-44AB-8F0C-97E3D8FE0A0D} = {C76D480B-18CB-41D4-B4A7-5560E5DB64C2}
 		{AD34F144-52DA-4481-990D-C6EFF2E48A4B} = {C76D480B-18CB-41D4-B4A7-5560E5DB64C2}
+		{F3469328-F1DB-4A64-9572-B9BEEE017A87} = {C76D480B-18CB-41D4-B4A7-5560E5DB64C2}
+		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7} = {F3469328-F1DB-4A64-9572-B9BEEE017A87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BC13340-B3BC-4AF8-BDA4-C0E76E62609C}

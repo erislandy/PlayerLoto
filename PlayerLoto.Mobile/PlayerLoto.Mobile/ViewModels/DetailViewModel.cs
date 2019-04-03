@@ -1,10 +1,12 @@
 ﻿using PlayerLoto.Mobile.ModelsUI;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Windows.Input;
 
 namespace PlayerLoto.Mobile.ViewModels
 {
@@ -43,7 +45,7 @@ namespace PlayerLoto.Mobile.ViewModels
                 {
                     Name = "Semanal",
                     Description ="Puedes ver el cartón de la lotería dia/noche.",
-                    TargetPage = "SemanalView"
+                    TargetPage = "Page1"
                 },
                 new Option()
                 {
@@ -88,5 +90,22 @@ namespace PlayerLoto.Mobile.ViewModels
 
         #endregion
 
+        #region Commands
+
+        public ICommand NavigationCommand
+
+        {
+            get
+            {
+                return new DelegateCommand<Option>(NavigationMethod);
+            }
+        }
+
+        private async void NavigationMethod(Option option)
+        {
+           await _navigationService.NavigateAsync(option.TargetPage);
+        }
+
+        #endregion
     }
 }

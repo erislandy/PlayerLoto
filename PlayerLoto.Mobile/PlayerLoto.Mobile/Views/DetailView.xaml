@@ -16,7 +16,14 @@
                 HasUnevenRows="True"
                 ItemsSource="{Binding OptionsList}" 
                 >
-               
+                <ListView.Behaviors>
+                    <behaviors:EventToCommandBehavior 
+                        Command="{Binding NavigationCommand, Mode=TwoWay}"
+                        EventName="ItemTapped"
+                        EventArgsParameterPath="Item"
+                        >
+                    </behaviors:EventToCommandBehavior>
+                </ListView.Behaviors>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell

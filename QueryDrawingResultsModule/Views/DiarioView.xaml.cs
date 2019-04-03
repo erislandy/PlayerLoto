@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace PlayerLoto.Mobile
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace QueryDrawingResultsModule.Views
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DiarioView : ContentPage
     {
-        public MainPage()
+        public DiarioView()
         {
             InitializeComponent();
         }
     }
 }
+
