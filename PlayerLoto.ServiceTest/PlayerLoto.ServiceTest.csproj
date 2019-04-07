@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -46,10 +52,12 @@
       <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Moq">
-      <HintPath>..\..\..\Sicateg\Proyecto\RepositorioSicateg\PresupuestoPE\PresupuestoTest\bin\Debug\Moq.dll</HintPath>
+      <HintPath>..\..\..\Erislandy\Sicateg\Proyecto\RepositorioSicateg\PresupuestoPE\packages\Moq.4.8.2\lib\net45\Moq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.ValueTuple">
       <HintPath>..\..\..\..\Xamarin Projects\Intermediario\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -58,12 +66,18 @@
     <Compile Include="AdvancedOperationTest.cs" />
     <Compile Include="DrawingResultManagerFixure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimulationTest.cs" />
     <Compile Include="WeekResultFixure.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PlayerLoto.DataEF\PlayerLoto.DataEF.csproj">
+      <Project>{6CCC995C-2D6F-49CB-B7D4-E78B3170D6DC}</Project>
+      <Name>PlayerLoto.DataEF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PlayerLoto.Data\PlayerLoto.Data.csproj">
       <Project>{491F0183-3584-442C-B897-394E7A63002B}</Project>
       <Name>PlayerLoto.Data</Name>
@@ -76,6 +90,9 @@
       <Project>{b710dceb-6ba5-40ff-bdec-02da959cb398}</Project>
       <Name>PlayerLoto.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

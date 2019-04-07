@@ -47,8 +47,10 @@
   <ItemGroup>
     <Compile Include="Delay.cs" />
     <Compile Include="DrawingResult.cs" />
+    <Compile Include="GameOfday.cs" />
     <Compile Include="Interfaces\IAdvancedOperation.cs" />
     <Compile Include="Interfaces\IDrawingResultManager.cs" />
+    <Compile Include="Interfaces\IGameManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

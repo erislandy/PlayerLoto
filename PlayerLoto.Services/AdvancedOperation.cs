@@ -134,7 +134,7 @@ namespace PlayerLoto.Services
             return list;
         }
         
-        private bool IsMemberDrawing(DrawingResult drawing, List<int> listNumber)
+        public bool IsMemberDrawing(DrawingResult drawing, List<int> listNumber)
         {
             int parameter = 0;
             Math.DivRem(drawing.Pick3, 100, out parameter);
