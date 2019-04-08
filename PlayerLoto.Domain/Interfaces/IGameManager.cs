@@ -10,5 +10,6 @@ namespace PlayerLoto.Domain.Interfaces
     {
         IList<int> GetNumbers();
         void PlayGame(DateTime date, DrawType drawType);
+        void ClearList();
     }
 }

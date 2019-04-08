@@ -23,6 +23,11 @@ namespace PlayerLoto.Services
             return numberList;
         }
 
+        public void ClearList()
+        {
+            numberList.Clear();
+        }
+
         public void PlayGame(DateTime date, DrawType drawType)
         {
             var delayList = new List<Delay>();

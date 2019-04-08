@@ -209,6 +209,7 @@
     <Compile Include="Controllers\DrawingResultsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SimulationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -218,8 +219,10 @@
     <Compile Include="Models\DrawingResultFilter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MatchGame.cs" />
     <Compile Include="Models\PathNumberFilter.cs" />
     <Compile Include="Models\PlayerLotoContextMVC.cs" />
+    <Compile Include="Models\SimulationFilter.cs" />
     <Compile Include="Models\WeekResultFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -289,6 +292,7 @@
     <Content Include="Views\AdvancedOperations\DelayOperation.cshtml" />
     <Content Include="Views\AdvancedOperations\DelatedNumbers.cshtml" />
     <Content Include="Views\AdvancedOperations\PathNumbers.cshtml" />
+    <Content Include="Views\Simulation\SimulationView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -9,7 +9,7 @@ namespace PlayerLoto.Domain
     public class GameOfday
     {
         public DateTime Date { get; set; }
-        public List<int> ArrayPic3 { get; set; }
+        public IList<int> ArrayPic3 { get; set; }
         public DrawType DrawType { get; set; }
     }
 }
