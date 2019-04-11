@@ -31,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PlayerLoto.Domain\PlayerLoto.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Prism">
       <HintPath>C:\Users\adm\.nuget\packages\prism.core\7.1.0.431\lib\netstandard2.0\Prism.dll</HintPath>
     </Reference>

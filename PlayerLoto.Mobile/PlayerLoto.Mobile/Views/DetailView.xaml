@@ -86,6 +86,7 @@
                 </ListView.ItemTemplate>
 
             </ListView>
+           
             <Grid
                 HeightRequest="70"
                 BackgroundColor="{StaticResource FontColor}">

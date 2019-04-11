@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Text;
 using Xamarin.Forms;
 
-namespace PlayerLoto.Mobile.Converters
+namespace QueryDrawingResultsModule.Converters
 {
     public class DateConverter : IValueConverter
     {

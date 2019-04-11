@@ -2,12 +2,135 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueryDrawingResultsModule.Views.DayHistoryView"
+             xmlns:converters="clr-namespace:QueryDrawingResultsModule.Converters"
              Title="Diario">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DateConverter x:Key="DateConverter"/>
+            <converters:TypeConverter x:Key="TypeConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout
+            Spacing="0"
+            >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Text="Filtrar resultados"
+                    TextColor="{StaticResource FontColor}"
+                    FontAttributes="Bold"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    >
+                    
+                </Label>
+                <Image
+                    Grid.Column="1"
+                    Source="filtrar.png"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="EndAndExpand"
+                    Margin="0,3,3,3"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    >
+                    
+                </Image>
+            </Grid>
+            <ScrollView>
+                <ListView
+                HasUnevenRows="True"
+                ItemsSource="{Binding DrawingResultList}" 
+                >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell
+                            >
+                                <Grid
+                                ColumnSpacing="0"
+                                Margin="2">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image
+                                    Source="{Binding Type, Converter={StaticResource TypeConverter}}"
+                                    WidthRequest="40"
+                                    HeightRequest="40"
+                                    Grid.Column="0">
+
+                                    </Image>
+                                    <Label 
+                                    Grid.Column="1"  
+                                    FontSize="Small"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="{StaticResource FontColor}"
+                                    Text="{Binding Date, Converter={StaticResource DateConverter}}"
+                                >
+                                    </Label>
+                                    <Label 
+                                    Grid.Column="2"  
+                                    FontSize="Small"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="{StaticResource FontColor}"
+                                    Text="{Binding Pick3}"
+                                >
+                                    </Label>
+                                    <Label 
+                                    Grid.Column="3"  
+                                    FontSize="Small"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="{StaticResource FontColor}"
+                                    Text="{Binding Pick4First}"
+                                >
+                                    </Label>
+                                    <Label 
+                                    Grid.Column="4"  
+                                    FontSize="Small"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="{StaticResource FontColor}"
+                                    Text="{Binding Pick4Second}"
+                                >
+                                    </Label>
+
+
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+            </ScrollView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -31,7 +31,6 @@ namespace PlayerLoto.Mobile
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<DrawingResultView>();
             containerRegistry.RegisterForNavigation<MasterView>();
          
 

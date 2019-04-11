@@ -1,11 +1,12 @@
-﻿using PlayerLoto.Mobile.Models;
+﻿
+using PlayerLoto.Domain;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using Xamarin.Forms;
 
-namespace PlayerLoto.Mobile.Converters
+namespace QueryDrawingResultsModule.Converters
 {
     public class TypeConverter : IValueConverter
     {
@@ -14,7 +15,11 @@ namespace PlayerLoto.Mobile.Converters
             var type = (DrawType)value;
             if (type == DrawType.Evening)
             {
-                return "ic_shortcut_wb_sunny.png";
+                return "ic_luna.png";
+            }
+            if (type == DrawType.Midday)
+            {
+                return "ic_sol.png";
             }
             else
             {
