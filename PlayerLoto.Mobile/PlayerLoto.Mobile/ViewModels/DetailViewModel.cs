@@ -37,28 +37,11 @@ namespace PlayerLoto.Mobile.ViewModels
             {
                 new Option()
                 {
-                    Name = "Diario",
-                    Description ="Consulta los tiros diarios dia/noche en un intervalo de fechas.",
+                    Name = "Historial",
+                    Description ="Consulta los tiros por dias, semanas, meses y años",
                     TargetPage="DiarioView"
                 },
-                new Option()
-                {
-                    Name = "Semanal",
-                    Description ="Puedes ver el cartón de la lotería dia/noche.",
-                    TargetPage = "Page1"
-                },
-                new Option()
-                {
-                    Name = "Mensual",
-                    Description ="Compara los resultados de un mes específico en diferentes años.",
-                    TargetPage="MensualView"
-                },
-                new Option()
-                {
-                    Name = "Anual",
-                    Description ="Compara los resultados de un año específico en diferentes meses.",
-                    TargetPage="ManagerView"
-                },
+               
                 new Option()
                 {
                     Name = "Generar",

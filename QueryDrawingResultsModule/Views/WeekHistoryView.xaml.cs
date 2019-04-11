@@ -9,13 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace QueryDrawingResultsModule.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DiarioView : TabbedPage
-    {
-        public DiarioView()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class WeekHistoryView : ContentPage
+	{
+		public WeekHistoryView ()
+		{
+			InitializeComponent ();
+		}
+	}
 }
-

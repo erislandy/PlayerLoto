@@ -5,11 +5,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\DayHistoryView.xaml" />
     <None Remove="Views\DiarioView.xaml" />
+    <None Remove="Views\MonthHistoryView.xaml" />
+    <None Remove="Views\WeekHistoryView.xaml" />
+    <None Remove="Views\YearHistoryView.xaml" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Views\DayHistoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DiarioView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MonthHistoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WeekHistoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\YearHistoryView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -39,7 +55,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\DayHistoryView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\DiarioView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MonthHistoryView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WeekHistoryView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\YearHistoryView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -36,11 +36,8 @@ namespace PlayerLoto.Mobile.ViewModels
         {
             _menuList = new List<Menu>()
             {
-              new Menu(){ Title = "Diario", TargetPage="StockView"},
-              new Menu(){ Title = "Semanal", TargetPage="InputListView"},
-              new Menu(){ Title = "Mensual", TargetPage="PayListView"},
-              new Menu(){ Title = "Anual", TargetPage="ManagerView"},
-              new Menu(){ Title = "Generar", TargetPage="GenerateView"},
+              new Menu(){ Title = "Historial", TargetPage="DiarioView"},
+               new Menu(){ Title = "Generar", TargetPage="GenerateView"},
               new Menu(){ Title = "Estadística", TargetPage="StatisticView"},
               new Menu(){ Title = "Jugar", TargetPage="PlayView"}
             };
