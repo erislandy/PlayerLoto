@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QueryDrawingResultsModule.Views.FilterDayHistoryView"
+             Title="Filtar"
+             xmlns:converters="clr-namespace:QueryDrawingResultsModule.Converters">
+    <ContentPage.Resources>
+        <converters:DrawingStateConverter x:Key="drawingStateConverter"/>
+        <converters:ParameterTypeConverter x:Key="parameterTypeConverter"/>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+            Margin="10,10,10,10"
+            Spacing="2">
+
+                <Label
+                    Margin="0,5,0,0"
+                    Text="Tiro"
+                FontSize="Small">
+                </Label>
+
+                <Picker
+                    ItemsSource="{Binding Filter.DrawingStateList}"
+                    SelectedItem="{Binding Filter.DrawingState,
+                                    Mode=TwoWay,
+                                    Converter={StaticResource drawingStateConverter}}">
+                </Picker>
+
+                <Label
+                    Margin="0,5,0,0"
+                    Text="Fecha Inicial"
+                    FontSize="Small">
+                </Label>
+
+                <DatePicker
+                    Date="{Binding Filter.InitialDate}">
+                </DatePicker>
+
+                <Label
+                    Margin="0,5,0,0"
+                    Text="Fecha Final"
+                    FontSize="Small">
+                </Label>
+
+                <DatePicker
+                    Date="{Binding Filter.FinalDate}">
+                </DatePicker>
+
+                <Label
+                    Margin="0,5,0,0"
+                    Text="Tipo de Busqueda"
+                    FontSize="Small">
+                </Label>
+
+                <Picker
+                ItemsSource="{Binding Filter.ParameterTypeList}"
+                SelectedItem="{Binding Filter.ParameterType,
+                               Mode=TwoWay,
+                               Converter={StaticResource parameterTypeConverter}}">
+
+                </Picker>
+
+                <Label
+                    Margin="0,5,0,0"
+                    Text="Entrar número"
+                    FontSize="Small">
+                </Label>
+
+                <Entry
+                    Text="{Binding Filter.Parameter}">
+                </Entry>
+                <Button
+                    Text="Aceptar"
+                    FontSize="Small"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Command="{Binding SubmitCommand}"
+                    BackgroundColor="{StaticResource AccentColor}">
+                    
+                </Button>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

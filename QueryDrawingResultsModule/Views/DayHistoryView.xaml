@@ -16,33 +16,38 @@
             >
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label
+                    FontAttributes="Bold"
+                    FontSize="Medium"
                     Grid.Column="0"
+                    Margin="15,0,0,0"
                     Text="Filtrar resultados"
                     TextColor="{StaticResource FontColor}"
-                    FontAttributes="Bold"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     >
                     
                 </Label>
-                <Image
+                <ImageButton
+                    BackgroundColor="{StaticResource FontColor}"
+                    Command="{Binding FilterCommand}"
+                    CornerRadius="25"
                     Grid.Column="1"
                     Source="filtrar.png"
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="EndAndExpand"
-                    Margin="0,3,3,3"
-                    WidthRequest="40"
-                    HeightRequest="40"
+                    Margin="0,5,5,5"
+                    WidthRequest="50"
+                    HeightRequest="50"
                     >
                     
-                </Image>
+                </ImageButton>
             </Grid>
             <ScrollView>
                 <ListView

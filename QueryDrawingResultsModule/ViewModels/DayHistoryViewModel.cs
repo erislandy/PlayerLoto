@@ -1,21 +1,46 @@
 ﻿using PlayerLoto.Domain;
+using PlayerLoto.Services.FilterOperation;
+using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Windows.Input;
 
 namespace QueryDrawingResultsModule.ViewModels
 {
-    public class DayHistoryViewModel : BindableBase
+    public class DayHistoryViewModel : BindableBase, INavigationAware
     {
-        
+        #region Attributes
+
+        ObservableCollection<DrawingResult> _drawingResult;
+
+        #endregion
 
         #region Properties
 
-        public ObservableCollection<DrawingResult> DrawingResultList { get; set; }
+        public ObservableCollection<DrawingResult> DrawingResultList
+        {
+            get
+            {
+                return _drawingResult;
+            }
+            set
+            {
+                SetProperty(ref _drawingResult, value);
+            }
+        }
+
         #endregion
-        public DayHistoryViewModel()
+
+        #region Services
+
+        INavigationService _navigationService;
+
+        #endregion
+        public DayHistoryViewModel(INavigationService navigationService)
         {
             var list = new List<DrawingResult>()
             {
@@ -109,7 +134,98 @@ namespace QueryDrawingResultsModule.ViewModels
                 }
             };
 
+
             DrawingResultList = new ObservableCollection<DrawingResult>(list);
+
+            FilterCommand = new DelegateCommand(FilterMethod);
+
+            _navigationService = navigationService;
         }
+
+       
+        #region Commands
+
+        public ICommand FilterCommand { get; set; }
+
+        #endregion
+
+        #region Methods
+
+        private async void FilterMethod()
+        {
+            await _navigationService.NavigateAsync("FilterDayHistoryView");
+        }
+
+
+
+        #endregion
+
+        #region INavigationAware Implementation
+
+        public void OnNavigatedFrom(INavigationParameters parameters)
+        {
+        }
+
+        public void OnNavigatedTo(INavigationParameters parameters)
+        {
+            if(parameters.Count == 0)
+            {
+                return;
+            }
+            var list = new List<DrawingResult>();
+            var enumerator = DrawingResultList.GetEnumerator();
+            
+            while(enumerator.MoveNext())
+            {
+                list.Add(enumerator.Current);
+            }
+
+            if (parameters.ContainsKey("initialDate")&& 
+                parameters.ContainsKey("finalDate"))
+            {
+                var initialDate = (DateTime)parameters["initialDate"];
+                var finaldate = (DateTime)parameters["finalDate"];
+
+                list.RemoveAll(d => d.Date < initialDate || d.Date > finaldate);
+                
+               
+            }
+            if (parameters.ContainsKey("drawingState"))
+            {
+                var drawingType = (DrawingState)parameters["drawingState"];
+                if(drawingType != DrawingState.All)
+                {
+                    DrawType drawType = (DrawType)Enum.Parse(
+                                                            typeof(DrawType),
+                                                            drawingType.ToString());
+
+                    list.RemoveAll(d => d.Type != drawType);
+                   
+                }
+            }
+
+            if (parameters.ContainsKey("parameterType"))
+            {
+                var parameterType = (ParameterType)parameters["parameterType"];
+                
+            }
+
+            if (parameters.ContainsKey("number"))
+            {
+                var number = (int)parameters["number"];
+                //Filtrar y actualizar DrawingResultList
+            }
+
+            DrawingResultList = new ObservableCollection<DrawingResult>(list);
+
+        }
+
+        public void OnNavigatingTo(INavigationParameters parameters)
+        {
+        }
+
+        #endregion
+
+
     }
 }

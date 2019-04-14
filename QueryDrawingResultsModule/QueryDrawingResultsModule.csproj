@@ -7,6 +7,7 @@
   <ItemGroup>
     <None Remove="Views\DayHistoryView.xaml" />
     <None Remove="Views\DiarioView.xaml" />
+    <None Remove="Views\FilterDayHistoryView.xaml" />
     <None Remove="Views\MonthHistoryView.xaml" />
     <None Remove="Views\WeekHistoryView.xaml" />
     <None Remove="Views\YearHistoryView.xaml" />
@@ -17,6 +18,9 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DiarioView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FilterDayHistoryView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MonthHistoryView.xaml">
@@ -32,6 +36,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PlayerLoto.Domain\PlayerLoto.Domain.csproj" />
+    <ProjectReference Include="..\PlayerLoto.Services\PlayerLoto.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,6 +68,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\DiarioView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\FilterDayHistoryView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MonthHistoryView.xaml.cs">

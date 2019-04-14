@@ -17,6 +17,8 @@ namespace QueryDrawingResultsModule.ModuleDefinitions
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<DiarioView>();
+            containerRegistry.RegisterForNavigation<FilterDayHistoryView>();
+            
         }
     }
 }
