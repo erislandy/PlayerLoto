@@ -2,12 +2,282 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QueryDrawingResultsModule.Views.WeekHistoryView"
+             xmlns:converters="clr-namespace:QueryDrawingResultsModule.Converters"
              Title="Semanal">
+    <ContentPage.Resources>
+        <converters:DateConverter x:Key="DateConverter"/>
+        <converters:TypeConverter x:Key="TypeConverter"/>
+        <ResourceDictionary>
+            <Style x:Key="labelCell" TargetType="Label">
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource FontColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid
+                Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image
+                    
+                    Margin="5,0,0,0"
+                    Source="{Binding DrawType, Converter={StaticResource TypeConverter}}"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Grid.Column="0">
+
+                </Image>
+
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Margin="15,0,0,0"
+                    Text="Filtrar resultados"
+                    TextColor="{StaticResource FontColor}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    >
+
+                </Label>
+                
+                <ImageButton
+                    BackgroundColor="{StaticResource FontColor}"
+                    Command="{Binding FilterCommand}"
+                    CornerRadius="25"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    Source="filtrar.png"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="EndAndExpand"
+                    Margin="0,5,5,5"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    >
+
+                </ImageButton>
+
+            </Grid
+>
+
+            <Grid
+                Grid.Row="1"
+                HeightRequest="50"
+                BackgroundColor="{StaticResource MainColor}"
+                ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="2.5*" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                <Label
+                    Text="Fecha"
+                    TextColor="White"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+
+                </Label>
+                <Label
+                    Text="Dom"
+                    TextColor="White"
+                    Grid.Column="1"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+
+                </Label>
+                <Label
+                    Text="Lun"
+                    TextColor="White"
+                    Grid.Column="2"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+
+                </Label>
+                <Label
+                    Text="Mar"
+                    TextColor="White"
+                    Grid.Column="3"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+
+                </Label>
+                <Label
+                    Text="Mié"
+                    TextColor="White"
+                    Grid.Column="4"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+
+                </Label>
+                <Label
+                    Text="Jue"
+                    TextColor="White"
+                    Grid.Column="5"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+
+                </Label>
+                <Label
+                    Text="Vie"
+                    TextColor="White"
+                    Grid.Column="6"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+
+                </Label>
+                <Label
+                    Text="Sáb"
+                    TextColor="White"
+                    Grid.Column="7"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+
+                </Label>
+            </Grid>
+                
+            <ListView
+                Grid.Row="2"
+                ItemsSource="{Binding WeekResultList}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell
+                            >
+                            <Grid
+                                ColumnSpacing="0"
+                                Margin="2">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2.5*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Label 
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    Margin="5,0,0,0"
+                                    Text="{Binding DateOfSunday, Converter={StaticResource DateConverter}}"
+                                    Style="{StaticResource labelCell}">
+                                </Label>
+                                <Label 
+                                    Grid.Column="1"  
+                                    Text="{Binding Sunday}"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="Small"
+                                    TextColor="{StaticResource FontColor}">
+                                </Label>
+                                <Label 
+                                    Grid.Column="2"  
+                                    Text="{Binding Monday}"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="Small"
+                                    TextColor="{StaticResource FontColor}">
+                                </Label>
+                                <Label 
+                                    Grid.Column="3"  
+                                    Text="{Binding Tuesday}"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="Small"
+                                    TextColor="{StaticResource FontColor}">
+                                </Label>
+                                <Label 
+                                    Grid.Column="4"  
+                                    Text="{Binding Wednesday}"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="Small"
+                                    TextColor="{StaticResource FontColor}">
+                                </Label>
+                                <Label 
+                                    Grid.Column="5"  
+                                    Text="{Binding Thursday}"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="Small"
+                                    TextColor="{StaticResource FontColor}">
+                                </Label>
+                                <Label 
+                                    Grid.Column="6"  
+                                    Text="{Binding Friday}"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="Small"
+                                    TextColor="{StaticResource FontColor}">
+                                </Label>
+                                <Label 
+                                    Grid.Column="7"  
+                                    Text="{Binding Saturday}"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="Small"
+                                    TextColor="{StaticResource FontColor}">
+                                </Label>
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

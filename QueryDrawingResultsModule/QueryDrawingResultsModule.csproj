@@ -8,6 +8,7 @@
     <None Remove="Views\DayHistoryView.xaml" />
     <None Remove="Views\DiarioView.xaml" />
     <None Remove="Views\FilterDayHistoryView.xaml" />
+    <None Remove="Views\FilterWeekHistoryView.xaml" />
     <None Remove="Views\MonthHistoryView.xaml" />
     <None Remove="Views\WeekHistoryView.xaml" />
     <None Remove="Views\YearHistoryView.xaml" />
@@ -21,6 +22,9 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FilterDayHistoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FilterWeekHistoryView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MonthHistoryView.xaml">
@@ -72,6 +76,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\FilterDayHistoryView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\FilterWeekHistoryView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MonthHistoryView.xaml.cs">

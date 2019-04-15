@@ -18,7 +18,8 @@ namespace QueryDrawingResultsModule.ModuleDefinitions
         {
             containerRegistry.RegisterForNavigation<DiarioView>();
             containerRegistry.RegisterForNavigation<FilterDayHistoryView>();
-            
+            containerRegistry.RegisterForNavigation<FilterWeekHistoryView>();
+
         }
     }
 }
