@@ -36,13 +36,8 @@ namespace QueryDrawingResultsModule.ViewModels
         #region Constructors
         public FilterDayHistoryViewModel(INavigationService navigationService)
         {
-            Filter = new DrawingResultFilter()
-            {
-                Parameter = 125
-            };
-
+            Filter = new DrawingResultFilter();
             SubmitCommand = new DelegateCommand(SubmitMethod);
-
             _navigationService = navigationService;
         }
 

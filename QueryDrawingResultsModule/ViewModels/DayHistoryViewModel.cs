@@ -1,6 +1,9 @@
-﻿using PlayerLoto.Domain;
+﻿using DataBaseLocalService.Filters;
+using DataBaseLocalService.Services;
+using PlayerLoto.Domain;
 using PlayerLoto.Services.FilterOperation;
 using Prism.Commands;
+using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -37,112 +40,28 @@ namespace QueryDrawingResultsModule.ViewModels
 
         #region Services
 
-        INavigationService _navigationService;
+        private readonly INavigationService _navigationService;
+        private readonly DataAccessService _dataAccessService;
 
         #endregion
-        public DayHistoryViewModel(INavigationService navigationService)
+
+        #region Constructors
+        public DayHistoryViewModel(INavigationService navigationService, DataAccessService dataAccessService)
         {
-            var list = new List<DrawingResult>()
-            {
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,1),
-                    Pick3 = 675,
-                    Pick4First = 88,
-                    Pick4Second = 75,
-                    Type = DrawType.Midday
-                },
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,1),
-                    Pick3 = 694,
-                    Pick4First = 34,
-                    Pick4Second = 48,
-                    Type = DrawType.Evening
-                },
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,2),
-                    Pick3 = 588,
-                    Pick4First = 20,
-                    Pick4Second = 82,
-                    Type = DrawType.Midday
-                },
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,2),
-                    Pick3 = 386,
-                    Pick4First = 34,
-                    Pick4Second = 66,
-                    Type = DrawType.Evening
-                },
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,3),
-                    Pick3 = 712,
-                    Pick4First = 16,
-                    Pick4Second = 24,
-                    Type = DrawType.Midday
-                },
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,3),
-                    Pick3 = 941,
-                    Pick4First = 75,
-                    Pick4Second = 16,
-                    Type = DrawType.Evening
-                },
-                 new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,1),
-                    Pick3 = 694,
-                    Pick4First = 34,
-                    Pick4Second = 48,
-                    Type = DrawType.Evening
-                },
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,2),
-                    Pick3 = 588,
-                    Pick4First = 20,
-                    Pick4Second = 82,
-                    Type = DrawType.Midday
-                },
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,2),
-                    Pick3 = 386,
-                    Pick4First = 34,
-                    Pick4Second = 66,
-                    Type = DrawType.Evening
-                },
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,3),
-                    Pick3 = 712,
-                    Pick4First = 16,
-                    Pick4Second = 24,
-                    Type = DrawType.Midday
-                },
-                new DrawingResult()
-                {
-                    Date = new DateTime(2019,1,3),
-                    Pick3 = 941,
-                    Pick4First = 75,
-                    Pick4Second = 16,
-                    Type = DrawType.Evening
-                }
-            };
+            _dataAccessService = dataAccessService;
+            _navigationService = navigationService;
+            var list = _dataAccessService.GetDrawingResultHistory();
 
 
             DrawingResultList = new ObservableCollection<DrawingResult>(list);
 
             FilterCommand = new DelegateCommand(FilterMethod);
 
-            _navigationService = navigationService;
         }
 
-       
+        #endregion
+
+
         #region Commands
 
         public ICommand FilterCommand { get; set; }
@@ -168,53 +87,29 @@ namespace QueryDrawingResultsModule.ViewModels
 
         public void OnNavigatedTo(INavigationParameters parameters)
         {
-            if(parameters.Count == 0)
+            if (parameters.Count == 0)
             {
                 return;
             }
-            var list = new List<DrawingResult>();
-            var enumerator = DrawingResultList.GetEnumerator();
+
             
-            while(enumerator.MoveNext())
-            {
-                list.Add(enumerator.Current);
-            }
 
-            if (parameters.ContainsKey("initialDate")&& 
-                parameters.ContainsKey("finalDate"))
-            {
-                var initialDate = (DateTime)parameters["initialDate"];
-                var finaldate = (DateTime)parameters["finalDate"];
 
-                list.RemoveAll(d => d.Date < initialDate || d.Date > finaldate);
-                
-               
-            }
-            if (parameters.ContainsKey("drawingState"))
-            {
-                var drawingType = (DrawingState)parameters["drawingState"];
-                if(drawingType != DrawingState.All)
-                {
-                    DrawType drawType = (DrawType)Enum.Parse(
-                                                            typeof(DrawType),
-                                                            drawingType.ToString());
+            var initialDate = (DateTime)parameters["initialDate"];
+            var finalDate = (DateTime)parameters["finalDate"];
+            var drawingState = (DrawingState)parameters["drawingState"];
+            var parameterType = (ParameterType)parameters["parameterType"];
+            var number = (int?)parameters["number"];
 
-                    list.RemoveAll(d => d.Type != drawType);
-                   
-                }
-            }
+            var filterByDate = new DrawingResultLocalFilterByDate(
+                                                                        _dataAccessService,
+                                                                        initialDate,
+                                                                        finalDate);
+            var filterByType = new DrawingResultFilterByType(filterByDate, drawingState);
 
-            if (parameters.ContainsKey("parameterType"))
-            {
-                var parameterType = (ParameterType)parameters["parameterType"];
-                
-            }
+            var filterByParameter = new DrawingResultFilterByParameter(filterByType, number, parameterType);
 
-            if (parameters.ContainsKey("number"))
-            {
-                var number = (int)parameters["number"];
-                //Filtrar y actualizar DrawingResultList
-            }
+            var list = filterByParameter.Filter();
 
             DrawingResultList = new ObservableCollection<DrawingResult>(list);
 
@@ -224,8 +119,8 @@ namespace QueryDrawingResultsModule.ViewModels
         {
         }
 
-        #endregion
 
+        #endregion
 
     }
 }

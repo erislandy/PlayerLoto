@@ -49,8 +49,20 @@ namespace PlayerLoto.Mobile
 
                     }
                 );
-            
-             base.ConfigureModuleCatalog(moduleCatalog);
+
+            Type dataBaseLocalServiceModule = typeof(DataBaseLocalService.ModuleDefinitions.Module);
+
+            moduleCatalog.AddModule(
+                    new ModuleInfo()
+                    {
+                        ModuleName = dataBaseLocalServiceModule.Name,
+                        ModuleType = dataBaseLocalServiceModule,
+                        InitializationMode = InitializationMode.WhenAvailable
+
+                    }
+                );
+
+            base.ConfigureModuleCatalog(moduleCatalog);
 
         }
 

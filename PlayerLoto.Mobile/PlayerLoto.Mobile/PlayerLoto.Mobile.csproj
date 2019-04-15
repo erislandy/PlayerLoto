@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DataBaseLocalService\DataBaseLocalService.csproj" />
     <ProjectReference Include="..\..\QueryDrawingResultsModule\QueryDrawingResultsModule.csproj" />
   </ItemGroup>
 

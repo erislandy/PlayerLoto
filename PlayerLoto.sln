@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayerLoto.Mobile", "Player
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{F3469328-F1DB-4A64-9572-B9BEEE017A87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryDrawingResultsModule", "QueryDrawingResultsModule\QueryDrawingResultsModule.csproj", "{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryDrawingResultsModule", "QueryDrawingResultsModule\QueryDrawingResultsModule.csproj", "{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseLocalService", "DataBaseLocalService\DataBaseLocalService.csproj", "{A8631321-2C36-4306-A19D-634A0F964269}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8631321-2C36-4306-A19D-634A0F964269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8631321-2C36-4306-A19D-634A0F964269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8631321-2C36-4306-A19D-634A0F964269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8631321-2C36-4306-A19D-634A0F964269}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{AD34F144-52DA-4481-990D-C6EFF2E48A4B} = {C76D480B-18CB-41D4-B4A7-5560E5DB64C2}
 		{F3469328-F1DB-4A64-9572-B9BEEE017A87} = {C76D480B-18CB-41D4-B4A7-5560E5DB64C2}
 		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7} = {F3469328-F1DB-4A64-9572-B9BEEE017A87}
+		{A8631321-2C36-4306-A19D-634A0F964269} = {F3469328-F1DB-4A64-9572-B9BEEE017A87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BC13340-B3BC-4AF8-BDA4-C0E76E62609C}
