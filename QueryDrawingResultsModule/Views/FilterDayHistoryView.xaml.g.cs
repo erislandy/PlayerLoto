@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 [assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("QueryDrawingResultsModule.Views.FilterDayHistoryView.xaml", "Views/FilterDayHistoryView.xaml", typeof(global::QueryDrawingResultsModule.Views.FilterDayHistoryView))]
 
 namespace QueryDrawingResultsModule.Views

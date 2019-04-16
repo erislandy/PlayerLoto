@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenerateNumbersModule.Views.GenerateNumbersView"
+             Title="Generador de Números">
+    <ContentPage.Content>
+        <StackLayout
+            BackgroundColor="{StaticResource BackgroundColor}">
+            <Label
+                Margin="0,20,0,20"
+                FontSize="Large"
+                FontAttributes="Italic"
+                Text="Cuántos quieres generar?"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="{StaticResource FontColor}">
+            </Label>
+            <Grid
+                Margin="10,10,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="button1"
+                        BackgroundColor="{StaticResource AccentColor}"
+                        Command="{Binding GenerateNumbersCommand}"
+                        CommandParameter="{Binding Text, Source={x:Reference button1}}"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        HeightRequest="80"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="80">
+
+                </Button>
+                <Button x:Name="button2"
+                        BackgroundColor="{StaticResource AccentColor}"
+                        Command="{Binding GenerateNumbersCommand}"
+                        CommandParameter="{Binding Text, Source={x:Reference button2}}"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        Grid.Column="1"
+                        HeightRequest="80"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="15"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="80">
+
+                </Button>
+                <Button x:Name="button3"
+                        BackgroundColor="{StaticResource AccentColor}"
+                        Command="{Binding GenerateNumbersCommand}"
+                        CommandParameter="{Binding Text, Source={x:Reference button3}}"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        Grid.Column="2"
+                        HeightRequest="80"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="20"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="80">
+
+                </Button>
+            </Grid>
+            
+            <Label Text="{Binding Text}"
+                   Margin="20"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="Accent"
+                   FontSize="Medium"
+                   FontAttributes="Bold"/>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

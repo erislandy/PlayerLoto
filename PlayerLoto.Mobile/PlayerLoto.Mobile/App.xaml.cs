@@ -62,6 +62,18 @@ namespace PlayerLoto.Mobile
                     }
                 );
 
+            Type generateNumbersModule = typeof(GenerateNumbersModule.ModuleDefinitions.Module);
+
+            moduleCatalog.AddModule(
+                    new ModuleInfo()
+                    {
+                        ModuleName = generateNumbersModule.Name,
+                        ModuleType = generateNumbersModule,
+                        InitializationMode = InitializationMode.WhenAvailable
+
+                    }
+                );
+
             base.ConfigureModuleCatalog(moduleCatalog);
 
         }

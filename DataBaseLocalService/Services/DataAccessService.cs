@@ -11,6 +11,7 @@ namespace DataBaseLocalService.Services
         #region Attributes
 
         private List<DrawingResult> _drawingResultList;
+        private List<int> _numberList;
 
         #endregion
         public DataAccessService()
@@ -251,6 +252,11 @@ namespace DataBaseLocalService.Services
                 },
             };
 
+            _numberList = new List<int>()
+            {
+                101,301,501,701,101,203,405,605,809,705,430,280,990,870,860,450,320,360,350,390,340,260,200,900,700,660,880,110,140,190
+            };
+
         }
 
         public List<DrawingResult> GetDrawingResultHistory()
@@ -258,6 +264,11 @@ namespace DataBaseLocalService.Services
             return _drawingResultList;
         }
 
-       
+        public List<int> GetNumberList()
+        {
+            return _numberList;
+        }
+
+
     }
 }
