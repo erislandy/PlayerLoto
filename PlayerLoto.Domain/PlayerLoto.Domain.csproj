@@ -51,6 +51,7 @@
     <Compile Include="DrawingResult.cs" />
     <Compile Include="GameOfday.cs" />
     <Compile Include="Interfaces\IAdvancedOperation.cs" />
+    <Compile Include="Interfaces\ICabalaManager.cs" />
     <Compile Include="Interfaces\IDrawingResultManager.cs" />
     <Compile Include="Interfaces\IGameManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

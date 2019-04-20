@@ -1,5 +1,6 @@
 ﻿using PlayerLoto.Data;
 using PlayerLoto.Domain;
+using PlayerLoto.Domain.Interfaces;
 using PlayerLoto.MVC.Models;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,11 @@ namespace PlayerLoto.MVC.Controllers
 {
     public class CabalaController : Controller
     {
-        IRepository _repository;
+        ICabalaManager _manager;
 
-        public CabalaController(IRepository repository)
+        public CabalaController(ICabalaManager manager)
         {
-            _repository = repository;
+            _manager = manager;
         }
         // GET: Cabala
         public ActionResult Index()
@@ -27,33 +28,18 @@ namespace PlayerLoto.MVC.Controllers
         public ActionResult Index(CabalaFilter filter)
         {
             int number;
+            filter.Cabala_Words = new List<Cabala_Word>();
+            filter.CabalaNumber = null;
             bool success = int.TryParse(filter.Word, out number);
             if (success)
             {
-                var result = _repository.GetList<Cabala_Number>(c => c.Number == number)
-                                           .FirstOrDefault();
-                if (result != null)
-                {
-                    filter.Result = result.Description;
-                }
-                else
-                {
-                    filter.Result = "valor no encontrado";
-                }
+                filter.CabalaNumber = _manager.FindByNumber(number);
             }
 
             else
             {
-                var result = _repository.GetList<Cabala_Word>(c => c.Word == filter.Word)
-                                           .FirstOrDefault();
-                if (result != null)
-                {
-                    filter.Result = result.Numbers;
-                }
-                else
-                {
-                    filter.Result = "valor no encontrado";
-                }
+                filter.Cabala_Words = _manager.FindbyWord(filter.Word);
+               
             }
 
                 

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedOperation.cs" />
+    <Compile Include="CabalaManager.cs" />
     <Compile Include="DrawingResultManager.cs" />
     <Compile Include="FilterOperation\DrawingResultFilterByDate.cs" />
     <Compile Include="FilterOperation\DrawingResultFilterByParameter.cs" />

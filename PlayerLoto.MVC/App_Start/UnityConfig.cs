@@ -18,6 +18,7 @@ namespace PlayerLoto.MVC
             container.RegisterType<IRepository, Repository>();
             container.RegisterType<IAdvancedOperation, AdvancedOperation>();
             container.RegisterType<IGameManager, GameManagerLast50DelayNumbers>("Ultimos50NumerosDemorados");
+            container.RegisterType<ICabalaManager, CabalaManager>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

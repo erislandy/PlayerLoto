@@ -19,34 +19,48 @@
         </div>
     </div>
 
-    
-   
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-12">
-                            @Html.LabelFor(model => model.Word, htmlAttributes: new { @class = "control-label" })
-                        </div>
-                        <div class="col-md-12">
-                            @Html.EditorFor(model => model.Word, new { htmlAttributes = new { @class = "form-control" } })
-                        </div>
 
-                    </div>
-                </div>
-            </div>
 
-        </div>
-
-       
-    
     <div class="row">
         <div class="col-md-4">
-            @Html.LabelFor(model => model.Result, htmlAttributes: new { @class = "control-label" })
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.Word, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Word, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
 
+                </div>
+            </div>
         </div>
-        <div class=" col-md-12">
-            <h4> @Model.Result</h4>
+
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            @if (Model.CabalaNumber != null)
+            {
+                <h4>Number: @Model.CabalaNumber.Number</h4>
+                <h5>@Model.CabalaNumber.Description</h5>
+            }
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            @if (Model.Cabala_Words.Count > 0)
+            {
+                foreach (var cabala_Words in Model.Cabala_Words)
+                {
+                    <h4>@cabala_Words.Word</h4>
+                    <h5>@cabala_Words.Numbers</h5>
+                    <br/>
+                }
+            }
         </div>
 
     </div>
