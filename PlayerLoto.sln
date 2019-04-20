@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryDrawingResultsModule",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBaseLocalService", "DataBaseLocalService\DataBaseLocalService.csproj", "{A8631321-2C36-4306-A19D-634A0F964269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateNumbersModule", "GenerateNumbersModule\GenerateNumbersModule.csproj", "{A6489962-BE83-445D-84AE-B345D23D4976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateNumbersModule", "GenerateNumbersModule\GenerateNumbersModule.csproj", "{A6489962-BE83-445D-84AE-B345D23D4976}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cabala_Number.cs" />
+    <Compile Include="Cabala_Word.cs" />
     <Compile Include="Delay.cs" />
     <Compile Include="DrawingResult.cs" />
     <Compile Include="GameOfday.cs" />

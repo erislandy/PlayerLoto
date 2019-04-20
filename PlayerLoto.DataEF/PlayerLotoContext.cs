@@ -12,5 +12,8 @@ namespace PlayerLoto.DataEF
         }
 
         public DbSet<DrawingResult> DrawingResults { get; set; }
+        public DbSet<Cabala_Number> Cabala_Numero { get; set; }
+        public DbSet<Cabala_Word> Cabala_Palabra { get; set; }
+
     }
 }

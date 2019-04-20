@@ -1,5 +1,9 @@
-﻿using System;
+﻿using PlayerLoto.MVC.Migrations;
+using PlayerLoto.MVC.Models;
+using System;
 using System.Collections.Generic;
+
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,6 +16,9 @@ namespace PlayerLoto.MVC
     {
         protected void Application_Start()
         {
+            Database.SetInitializer(
+              new MigrateDatabaseToLatestVersion<PlayerLotoContextMVC, Configuration>());
+
             AreaRegistration.RegisterAllAreas();
             UnityConfig.RegisterComponents();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
