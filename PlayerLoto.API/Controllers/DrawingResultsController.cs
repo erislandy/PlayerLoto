@@ -8,100 +8,43 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Newtonsoft.Json.Linq;
 using PlayerLoto.DataEF;
 using PlayerLoto.Domain;
 
 namespace PlayerLoto.API.Controllers
 {
+    [RoutePrefix("api/DrawingResults")]
     public class DrawingResultsController : ApiController
     {
         private PlayerLotoContext db = new PlayerLotoContext();
 
-        // GET: api/DrawingResults
-        public IQueryable<DrawingResult> GetDrawingResults()
+        [HttpPost]
+        [Route("History")]
+        public IHttpActionResult DrawingResultByDate(JObject form)
         {
-            return db.DrawingResults;
-        }
-
-        // GET: api/DrawingResults/5
-        [ResponseType(typeof(DrawingResult))]
-        public IHttpActionResult GetDrawingResult(int id)
-        {
-            DrawingResult drawingResult = db.DrawingResults.Find(id);
-            if (drawingResult == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(drawingResult);
-        }
-
-        // PUT: api/DrawingResults/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutDrawingResult(int id, DrawingResult drawingResult)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != drawingResult.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(drawingResult).State = EntityState.Modified;
+            dynamic jsonObject = form;
+            DateTime initialDate;
+            DateTime finalDate;
 
             try
             {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!DrawingResultExists(id))
+                initialDate = jsonObject.initial_date.Value;
+                finalDate = jsonObject.final_date.Value;
+                if(finalDate.CompareTo(initialDate) < 0)
                 {
-                    return NotFound();
+                    return BadRequest("final date can not lowwer than initial date");
                 }
-                else
-                {
-                    throw;
-                }
+                return Ok(db.DrawingResults.Where(d => d.Date >= initialDate && d.Date <= finalDate)); 
             }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        // POST: api/DrawingResults
-        [ResponseType(typeof(DrawingResult))]
-        public IHttpActionResult PostDrawingResult(DrawingResult drawingResult)
-        {
-            if (!ModelState.IsValid)
+            catch (Exception ex)
             {
-                return BadRequest(ModelState);
+
+                return BadRequest("Elements not found");
             }
-
-            db.DrawingResults.Add(drawingResult);
-            db.SaveChanges();
-
-            return CreatedAtRoute("DefaultApi", new { id = drawingResult.Id }, drawingResult);
+            
         }
-
-        // DELETE: api/DrawingResults/5
-        [ResponseType(typeof(DrawingResult))]
-        public IHttpActionResult DeleteDrawingResult(int id)
-        {
-            DrawingResult drawingResult = db.DrawingResults.Find(id);
-            if (drawingResult == null)
-            {
-                return NotFound();
-            }
-
-            db.DrawingResults.Remove(drawingResult);
-            db.SaveChanges();
-
-            return Ok(drawingResult);
-        }
-
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -111,9 +54,5 @@ namespace PlayerLoto.API.Controllers
             base.Dispose(disposing);
         }
 
-        private bool DrawingResultExists(int id)
-        {
-            return db.DrawingResults.Count(e => e.Id == id) > 0;
-        }
     }
 }
