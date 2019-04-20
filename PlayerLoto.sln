@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBaseLocalService", "Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateNumbersModule", "GenerateNumbersModule\GenerateNumbersModule.csproj", "{A6489962-BE83-445D-84AE-B345D23D4976}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLoto.API", "PlayerLoto.API\PlayerLoto.API.csproj", "{87BEBBFD-A2C5-47C5-9C85-A3AAB9378A53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{A6489962-BE83-445D-84AE-B345D23D4976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6489962-BE83-445D-84AE-B345D23D4976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6489962-BE83-445D-84AE-B345D23D4976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BEBBFD-A2C5-47C5-9C85-A3AAB9378A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87BEBBFD-A2C5-47C5-9C85-A3AAB9378A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87BEBBFD-A2C5-47C5-9C85-A3AAB9378A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87BEBBFD-A2C5-47C5-9C85-A3AAB9378A53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +114,7 @@ Global
 		{E00D4DC3-44AA-4AFC-AA24-9C469E7114C7} = {F3469328-F1DB-4A64-9572-B9BEEE017A87}
 		{A8631321-2C36-4306-A19D-634A0F964269} = {F3469328-F1DB-4A64-9572-B9BEEE017A87}
 		{A6489962-BE83-445D-84AE-B345D23D4976} = {F3469328-F1DB-4A64-9572-B9BEEE017A87}
+		{87BEBBFD-A2C5-47C5-9C85-A3AAB9378A53} = {3237BD8B-D531-4CCF-9F8C-577A8C19FF4B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BC13340-B3BC-4AF8-BDA4-C0E76E62609C}
