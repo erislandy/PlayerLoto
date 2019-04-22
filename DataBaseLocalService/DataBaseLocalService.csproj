@@ -5,6 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\test1.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\test1.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="SQLite.Net-PCL" Version="3.1.1" />
+    <PackageReference Include="SQLiteNetExtensions" Version="1.3.0" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Entities">
       <HintPath>..\..\UnityExampleMVC\Entities\bin\Debug\Entities.dll</HintPath>
     </Reference>
