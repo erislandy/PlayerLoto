@@ -1,4 +1,6 @@
-﻿using CabalaModule.Views;
+﻿using CabalaModule.Implementations;
+using CabalaModule.Views;
+using PlayerLoto.Domain.Interfaces;
 using Prism.Ioc;
 using Prism.Modularity;
 using System;
@@ -16,6 +18,7 @@ namespace CabalaModule.ModuleDefinitions
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.Register<ICabalaManager, CabalaLocalManager>();
             containerRegistry.RegisterForNavigation<CabalaView>();
         }
     }

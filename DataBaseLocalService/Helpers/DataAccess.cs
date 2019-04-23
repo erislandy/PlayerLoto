@@ -13,7 +13,8 @@ namespace DataBaseLocalService.Helpers
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    
+    using System.Threading.Tasks;
+
     public class DataAccess : IDisposable, IDataAccess
     {
         private SQLiteConnection connection;
@@ -61,7 +62,7 @@ namespace DataBaseLocalService.Helpers
         {
             if (WithChildren)
             {
-                return connection.GetAllWithChildren<T>().ToList();
+                return  connection.GetAllWithChildren<T>().ToList();
             }
             else
             {

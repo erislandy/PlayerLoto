@@ -1,0 +1,502 @@
+[
+    {
+        "Number": 1,
+        "Description": "\"     CABALLO -  sol débil -  tintero - camello -  pescado chiquito - pinga -     comerciante - fiebre alta -  rico - maíz - cabeza - estribo - ruedo - peineta rota -  pido de auxilio - sirena -  caballería - loco - tiro - carriola - hidropesía - mulo - obispo - príncipe - alguacil - nuez - dios - jinete - jardín - ebrio - pensamiento - barrer - dragón - piedra - invento - cebra - avena - botella - soldado - carreta - obelisco - baño - guayacán - perfume - acusación - caballerizas - cabriola - comunión - amputación - pozo - tintorero - gemelo - hoyo - jirafa - liebre - aguja - avellana - cuero - sombrero - venado,\"",
+        "Id": 1
+    },
+    {
+        "Number": 2,
+        "Description": "\"     MARIPOSA - hombre - cafetera - grillo - caracol - dinero - plata - jarro -     reaparición - lámpara inflamada - instrumento - jarabe - cuartel - día - pastel - caída - casa - quemado - fiesta - calor - hoz - puerta - llagas - peregrino - hoguera - audición - campiña - cotorra - naranja - cisterna - andar - matar un alacrán - asaltado - polaina - gato de angora - desdén - pájaro chiquito - quemar - quemadura - obelisco - concierto - acreedor - andamiada - borceguí - loro - pregón - gallo - campana - alacrán - pavo real,\"",
+        "Id": 2
+    },
+    {
+        "Number": 3,
+        "Description": "\"     MARINERO - luna - taza de café - ciempiés -  muerte - niño chiquito - costillas - hombre afeminado - limón - corojo - rosa amarilla - muerto vivo - pollo - escalera - campana - cascada - ciudadela -  emboscada -  suicidio - ajo - pata de perro -  aureolo - herida -  labios - dientes -  actriz - leche - fuego - piano - búho - látigo - ojos - viaje - improvisar - llanto - amar - peinado - coronel - río - tarro - conejo -  burro -  ranas -  viejo fino - aneurisma - ladrón - canción - peine - tumba - sangre - luna menguante - maricón - gallina - teto - patada de animal - monja - chivo, \"",
+        "Id": 3
+    },
+    {
+        "Number": 4,
+        "Description": "\"     GATO - soldado extranjero - llave -  vela - pavo real -  dientes -  bordado - boca - gato cimarrón - ají picante - canario - columna - harapos - inventario - fogón -     quimbombó -  clavellina - Santa Bárbara - vela - pañuelo - yegua - cruz -     sepultura - artista - ojos - muerto - taburete - rosario - mirto -  capilla - codorniz - desafío - monte - bota - cerrajero - cara - cenizas -  cicatriz - mesa - enclenque - cereza - pañuelo bordado - bizcocho - uñas - atragantar - acaparador - aura en techo - bala de cañón - tumba - zapato - copa - muela - pelota - pollo - tierra - monja -  elefante,\"",
+        "Id": 4
+    },
+    {
+        "Number": 5,
+        "Description": "\"     MONJA - mar - candado - periódico - lombriz - rapto - nave - hígado - sapo -     boquilla - submarino - mano - teatro - tempestad - pecho - sermón - líos -     ametralladora -  fruta - cadenas -  mujer - comadrona - hisopo - paloma - misa - confesor - mandarina - naranja - suerte - espejo - pelado - acta - regalo - campanilla - tierra - iglesia - desorden - estante - convento - velo - universo - abadía - llavero -  batey - bendecir - domingo - urna - zorra - ausencia - bailar - barrer -  capuchino - estandarte - máscara - bollo - pepino - virgen - pavo real - gallo,\"",
+        "Id": 5
+    },
+    {
+        "Number": 6,
+        "Description": "\"     JICOTEA - carta - reverbero -  botella - luna -  arado -  cita - preciso - candela chica - camino largo - insolencia - lechuga - garganta - espía - maracas - aeroplano - payaso - receta - tarro - yegua - cadáver - globo - biberón -  carroza - negro -  anillo -  basura - párpado - flores - café - relajo chiquito - cojo - lechuza - vacuna - balanza - calabaza - verano - abandono - código - sonámbulo -  eslabón - tropezar - desprecio -  micrófono - boletín  - botón - perrón - ciego -  marqués -  toro - casa, \"",
+        "Id": 6
+    },
+    {
+        "Number": 7,
+        "Description": "\"     CARACOL -  sueño - mierda - medias - puerco - suciedad - polvo - harapiento - pinga - culo -  niño - cotorra -  revólver - ladrón - peras - pirámides - número cantado - casa - cama -  colegio - escribir -  lapicero - pleito - zarzal - calabozo -  bufete - ley - río chiquito - sala - gemelo - venta - ombligo - frío - cadera - ruido - madera - arco barril - ventana - agua - discurso - tipógrafo - lluvia con sol - juramento - sentarse y caerse - serenata - calderos - chimenea - partes sexuales -  ensalada - prisión - mañas - quemar - mujer mala - peine - pensamiento - pájaro - pescado chico,\"",
+        "Id": 7
+    },
+    {
+        "Number": 8,
+        "Description": "\"     MUERTO -  león - calabaza - mesa cuadrada - tigre - sijú - limpieza - loma -    descanso - candela - botella - palos - cartas - llanto - armario - rosas - soledad - cementerio - guerra - vista - negro - ciego - alfiler - circo - zambo - espejo - arañas - baile - tumba -  cólera - aceituna - sepultura - submarino hundido -  diamante - visita -  nicho - arzobispo - banquete - Virgen de la Caridad - aciago - panteón - viudedad - patizambo - morir - antepasados - chorizos - consejos - epitafio - espectros - fantasma - aguacate - bancarrota - dominó - cordones - mujer mala - bruja, \"",
+        "Id": 8
+    },
+    {
+        "Number": 9,
+        "Description": "\"     ELEFANTE -  entierro - lira -  cubo - buey - lanza -  pica pica - albañil - coraza -    máquina de coser - filtro - calamar - martillo - cabeza - padre - miedo - leña - santo - pan - mudo - ahorcado - comer - lengua - liga - constructor - café - anteojo - clavo - ojos - guisado - foto - herida - dromedario - oso - cuchillo - criado - leer - ganado - nariz - pato - jefe - parásito - sapo - olivos - sardina -  ventana - arsenal - artificiales - estatua - gemelo - hormigas - palacio - peluquero - parque - amigo - cuba - zoológico - ramilletes - sal - caracol - lombriz,\"",
+        "Id": 9
+    },
+    {
+        "Number": 10,
+        "Description": "\"   PESCADO GRANDE -  paseo - malla - cazuela nueva - lancha - susto - rascacielos -      almanaque -  majá - bohío - brocha - libro - emperadora - menudo - humo -      curva - semilla - quemazón  - collar - santo - ciego - escopeta - fusil - bestia - hacha - relámpago - huevo - salmón - cruz - tortuga - entierro - fábula - ardilla - lluvia - pescar - leopardo - crucifijo - foto - aura - pica pica - vuelco -  zodiaco -  pollo chico - adjudicación - caballo - desconecto - comadreja - hierro -  desconocimiento - abanico - barrio - escuela - olla - plancha - viaje - ferrocarril - homicidio - avispa - sol,\"",
+        "Id": 10
+    },
+    {
+        "Number": 11,
+        "Description": "\"   GALLO - lluvia -  fosforera - taller - caballo - sal -  azotar -  niño - almanaque -  muchas monedas antiguas -  mellizos -  sombrero - llanura - cabellos -       cemento - arco iris - guineo - número - melón -  comadrona - cantar - ferrocarril -  camisa - ojos - bohío - plátano - violeta - riñones -  fósforo - comer - calzado -  multa - ancla - cenizas - cisne - dinero - ganso - pintar - tenedor -  muerte al nacer - jimagua - canto - as de oro - pitirre - insomnio - escándalo - lienzo - moneda - doncella - péndulo - ratones - banca - batallas - cometa - estrangular - convulsiones - caramelo - guajiro - gigante - Miami - mocha - radio - horno - Ana - tigre - caracol,\"",
+        "Id": 11
+    },
+    {
+        "Number": 12,
+        "Description": "\"   MUJER SANTA - vieja - cazuela vieja - muchachito - perro grande - vela -      casa de alto - huerto -  administración - jabón - as de copa - toalla - tigre - noche - estrella - tijeras - Virgen de la Caridad - comadrona - cintura - ciervo - desnudez - gallina - hierba -  lecho - leña - puente - ropa nueva - bombo - cena - oficina -  cañandonga - mujeres -  montaña - niño - oreja - comida - viaje - consuelo - matrimonio - calzoncillo - pitirre - montura - abrazo - sapo - tren -  Santa Bárbara - color rojo - disfraz - limosnero - mujer buena - madre - ramera -  corazón - pleito - cebolla -  boda - rey - amor - hisopo - estropeado - edificio - sábana - tierra - pantalón -  piedra fina - caballo,\"",
+        "Id": 12
+    },
+    {
+        "Number": 13,
+        "Description": "\"  PAVO REAL - niño grande - anafre - toalla - elefante - reír - bebe - equilibrista - cedro - desjuiciado - leche - mala palabra -  guanajo - mierda - bobo - as de espada - banco de sangre - relajo chico - campo - perro - cine - hombre enfermo -  hospital -  risa - espada -  destreza - bujía - peluca - reptil - vómito -  bosque - zanja - espectáculo - mano - zanahoria -  seno - abjuración - antorcha -  celo - ciruelas - rosas -  tartamudo - ron - cinto - miedo - teatro - yuca - visión - pobre - chulo - sapo, \"",
+        "Id": 13
+    },
+    {
+        "Number": 14,
+        "Description": "\"   GATO GRANDE - matrimonio viejo - sartén - aretes -  gato - cementerio - caída casual -  sortija -  gallo fino - mocha - enamorada -  traición - as de basto - tigre - viaje - luto - sombra - fuente -  pobre - juguete - macho grande - pobreza - tijeras - cidra - cuchara -  león - col - búho - gata parida - riña - horca -  puñal - bolsa -  compadre - poste - banco - combate - venganza - barrera - regalo - bandera - ganar pleito - nabos - destierro - desobediencia - techo - mejorana - inquietud - pimienta - molino - acróstico - espada -  buitre -  cálculo - cartel - florestas -  padre - beso - sostén - leche - mujer preñada - aceite - escama - teta -  hígado - muerto - tiñosa,\"",
+        "Id": 14
+    },
+    {
+        "Number": 15,
+        "Description": "\"   PERRO CHICO - visita - cuchara - gallo de pelea - ratón - muñeca - lobo -      coriza - cucaracha - muleta - mártires -  corre corre - pepino - nuez - señorita - ráfaga - tenedor - chicharrón - vanidad - alcachofas - olla - agua - cartas - billetera - beso - almuerzo - madre - coliflor - flauta - pulga - cigarro - labrar - conejo - libro - vieja - mordedura - cigarra - billete perdido - timbre - caballería - destrozar - tonelada -  oreja - cerradura - búcaro - camisa - ron - dentista - árbol - mulo - infierno - paloma - automóvil,\"",
+        "Id": 15
+    },
+    {
+        "Number": 16,
+        "Description": "\"   TORO -  fuego -  vestido -  plancha - avispa -  tojosa - hombre galante -      arena -  queso - vaca -  santo -  mosca en café -  corazón - calentura -      zapatos -  mono - fajar - prostituta - ramera - luz - cinto - comunión - cola - cañón -  acostado - tarro -  carnicería -  lámpara -  palangana - limosna -  cabra - jubito - arrendar -  matadero - casamiento - flecha -   anguila -   victoria -  mono chico -  dolor de barriga -  ropa vieja - vena -  buey - ballena -  cuerno -  batirse -  bien -  buñuelo - cuadro - ejército - féretro - incendio - labrador - estrella - china - lucero - blumer - naranja - tapa - luna - lluvia,\"",
+        "Id": 16
+    },
+    {
+        "Number": 17,
+        "Description": "\"   LUNA - mujer mala - camisón - hule - fuma opio - San Lázaro - cañaveral -      dios - guardia - nube - camisa - evasión de preso -  botija - polillas - faro - camarón - hilo - tinieblas - dibujo - cuadro - calentura - falda - eclipse - zorra - confitura - cerebro -  empeine - hongo - fuego - seso - excusao - flecha - gallina - cabildo - castaña - abrigo - armas - imagen - apagador - barómetro - autor - inaccesible -  árbol viejo - pastor -  ballena - cuna - trusa - pantalón - visita - fecha - amor - falta - sapo - perro,\"",
+        "Id": 17
+    },
+    {
+        "Number": 18,
+        "Description": "\"   PESCADO CHIQUITO - iglesia -  palma - sirena - gato amarillo -  pared - casa -   legislador - mono -  ahogado -  cuchara de albañil - brujería - cosa cara -  semilla - carne -  muerto -  esponja -  cantar - ahorcado - limón - necropsia - hacha - pañuelo - ganado - diccionario - juramento - habichuela - mudanza - tocador - vinagre - ablución - basílico - peces - autopsia - chocolate - contador - empresa - horquillas - verduguillo - terciopelo - pantera - abogado - vecina - paloma - ajustador - marinero - caballo - mujer mala,\"",
+        "Id": 18
+    },
+    {
+        "Number": 19,
+        "Description": "\"   LOMBRIZ - campesino - mesa redonda - tropas - jutía - bandera - perro -      granada - vicio - cada casual - lodo - armadura de reloj - té - tierra - murciélago - postre - maíz -  costa -  madera - constructor - insomnio - bacalao - orégano - verdolaga - pantano -  buñuelo - aserrar - aposento - majá - dádiva - anatomía -  construcción - armadura - beber - caverna - cesta - excusas - guisante - brocha - habichuela - hombres - plátano maduro - granizo - soldado - carpintero - gusano - macho -  camarón,\"",
+        "Id": 19
+    },
+    {
+        "Number": 20,
+        "Description": "  GATO GRANDE - cañón - tibor - camiseta - mujer santa - policía - animal -      avaro -  ladrón -  caja de cartón -  robo - soga - mazorca - garrapata - soñar con la edad - ángel - dados - miel - azúcar - Biblia - caña - ñame - color bello - estanque - orinal - grosellas - frente - azotar - maíz - teatro -  biblioteca -  brillar -  ayuno -  bandido -  manta - tiburón -  mirar de frente - tabaco - pestillo - uñas -  gallo criollo -  terror -  estreno - pastilla -  terreno malo - café -  granos - cetro - carestía -   billar - calor - camión - cifra - cigarro - confitura - espejo grande - anoncilllo - verraco - lirios - guante -  pantalón - arado - libro - cama chiquita - paraíso - uvas - chivo - cochino",
+        "Id": 20
+    },
+    {
+        "Number": 21,
+        "Description": "\"   MAJA -  reloj - chaleco -  cotorra - gallo - dinero - brillante - nudo - afortunado - dos entierros - seca - títeres - urgente - toronjil - oro - recabuchador - planta seca - sol brillante - enamorada - jurar - habas - ángel criminal - cazar - comisión - fiesta - espalda - familia - lejía - gordo - higo - mesa - animales - mancha - rocas -  acusador - paraguas - lengua - llanura -  prostituta -  recluta - bomba - anécdotas - visión - criminal - ruiseñor - Dos de oro - cancelada - mujer mala -  canónigo - amatista - curiosidad - laberinto - horno - corazón - mosquitero -  terremoto - culero de niño - maíz -  marinero - muerto,\"",
+        "Id": 21
+    },
+    {
+        "Number": 22,
+        "Description": "\"   SAPO - estrella - lira vieja - chimenea - jicotea - novios descarados -  lucero - música - abismo - chisme -  dedo - dolencia - cenagal - ciprés - hijo postizo -  rana toro - mujer preñada - estornudo - granja - pies - Fidel - mar - viento - preso - aldea - bellotas - barco - odio - lenteja - lancha -  barba - farmacéutico - banquero - aire - profesión - torrente - general - pantalón - embarazo - alacrán - aguacero -  pepilla -  amiga - lluvia - bohío - pollo - almohada - humo - anón - acueducto - disturbio - Dos de copa - plato - piojo - piso - sal - ratón - iglesia,\"",
+        "Id": 22
+    },
+    {
+        "Number": 23,
+        "Description": "\"   VAPOR -  monte - escalera - submarino - anguila - muerto - bote de lujo - luz -  barco - candela - anguila -  general - ultraje -  alacrán - manta -  Dos de espada - Virgen de la Caridad - pelota - chino - radio - silla - puerco chiquito -  radio grabadora - academia -  admiración - navíos -  audiencia - barba - dúo - remos - vino - humareda - diligencia - bigote - mudanza - animal en la cima -  negra santa - aldea - animal - perfume - carretero -  ciudad - convulsiones - elogiar - arpa -  traje -  plomo -  hamaca - árbol - excusao - lluvia - valiente - remar - selva - piloto -  pelotero - grillo - sirena,\"",
+        "Id": 23
+    },
+    {
+        "Number": 24,
+        "Description": "\"   PALOMA - música - cocina - carpintero - pescado grande - cariño - viña -      madre buena - hermano - aflicción - desertor - gallo - granizo - burla - jaula - madera - moza - palma - papá - pichón - tíos - retrato - tórtola - prudente -  rábano -  cocinero - caravana - perdiz - cerrajero - mosca - valiente - noche buena - regalo -  pollo mediano - operación - camino - altar - amigo - bordado - apetito - defensor - disputa - rival - encaje - desertor - Dos de basto -  abogado -  espíritu santo -  contrabando - cáncer - caridad - cirujano - río - fogón - bisagra - actor - enigma - favores - granizo - limpia botas - gato - hada - bandera - tren,\"",
+        "Id": 24
+    },
+    {
+        "Number": 25,
+        "Description": "\"   PIEDRA FINA - casa nueva - sol fuerte - monja extranjera - ranas - sed - corto circuito - abuelo - tribunal - aire - arco triunfal -  billetes - enano - eje - árbol - mejorana -  pulga - canario - corazón -  camarón - dorado - murciélago - hijo - loma - trabajo -  arco iris - camino - ojos - joyas - golpe - reloj - cólico - cielo - iluminación - estómago -  intestino - estudio - aguja -  yunque -  billete dorado -  damas - arco - diamante - aceite -  cera -  muleta - oro -  chino - pollo chico - eco - bandera  Virgen de la Caridad - venado - avellana - hotel - galopar - rodillas - piernas - furia - santo - cristo - beneficio - perro jíbaro - inaugurar - mármol - lujo - estudiante - ratón - casona - araña - monja,\"",
+        "Id": 25
+    },
+    {
+        "Number": 26,
+        "Description": "\"   ANGUILA - calle - médico nuevo - brillante - nube de humo - dominó - fecha de luto - abejas - explosión - tienda - resbaloso - mono - calabozo - indio -  abanico - halcón -  alondra -  busto -  brazo - ganado - guano - juicio - gladiolos - peste -  precipicio - peligro -  luto - veleta - deshollinador -  fuente benéfica - abjuración - almendra -  abogado - selva africana - cadalso - castillo - comedia - galeoto - ganancia -  indigestión -  lienzo -  manzana - medicina - mochuelo - pista - camarón - banquero,\"",
+        "Id": 26
+    },
+    {
+        "Number": 27,
+        "Description": "\"   AVISPA - campana - canario - cuchara vieja - mono - Biblia - hipo - nido -    salaciones - vela de muerto - caña - lagartija - abejas - cabaña - rey - ave de paso -  autoridad en el coche -  trompo -  bebedero - padrino -  café -  cepillo - salvia -  romero - oreja -  danza -  malva - tontería - toro - pájaro chiquito -  corazón - pintura - baúl - bebedores - torno - hígado - mostaza - ingenio - bolos - adquisición - regimiento - trampa - cacao - paja - pescado grande - cachimba,\"",
+        "Id": 27
+    },
+    {
+        "Number": 28,
+        "Description": "\"  CHIVO - bandera blanca - político - mano - perro chico - bollo chico - mujer mentirosa -  cantador - muro - albergue -  cántaros - carrillos - muerto - venao - delirio -  piloto - carro bombero -  justicia -  carpintero - bandido - coraje - reverbero - cordero - abrazar - berro - velada - bandera - juez - carnero - rapto - sapito - tambor - tigre -  cumplido - blanco - adulterio -  pedir la mano - influenza -  buitre - aparición - jabao -  mudanza - mirto - mordaza - oveja - montura - cubierto -  perla -  vestido - hormiguero - muerto vivo - mujer santa - araña,\"",
+        "Id": 28
+    },
+    {
+        "Number": 29,
+        "Description": "\"   RATON - nube - jutía -  venado viejo -    escoba - carpintero -   simulacro de bombero - garaje - fósforo - cara - sirena - hiena - heno -  astillero - legumbre - afeitar - ruinas - acera -  campamento - inglés - bodega - boniato - almanaque - gamuza -  monte firme -  águila - paseo - arlequín - arco iris - camello - insomnio -  bandido - carbón - cuba - botella - cofre - enemigo - nieve - ingleses - subterráneo - nariz - barbera - casabe - música -  ladrón - rastro - tiñosa - paloma,\"",
+        "Id": 29
+    },
+    {
+        "Number": 30,
+        "Description": "\"  CAMARON - arco iris - almanaque - buey flaco - chivo - hombre borracho - timbalero - pinga - enfermedad - bollo pelao - boca - estrella - acero -  tirabuzón - toro rojo - harina - mujer - noche - enfermo - criado - pino - chincha - regalo - terraza - púa - niño malo - sueño - blanco - ascensión - general cocodrilo - cigüeña - cangrejo - langosta -  entraña - acedía - vómito - botella - astillero - depósito - caimán -  vecinos -  marisco - música - espuela de gallo - novelas - diadema - rejuvenecer -  termómetro - pico - rosa - bastón - mariposa - niños,\"",
+        "Id": 30
+    },
+    {
+        "Number": 31,
+        "Description": "\"   VENADO - escuela -  tinajero -  zapatos - pato - tropel - grúa -  reja - Tres de oro -  prostituta -  banco de piedra -  mamoncillo -  laurel - palos - ropa vieja -  vestido -  arbusto -  lengua - abejas - ancianos - salto - cabriola - guitarra - pulmón -  estudiante - ajedrez -  liebre - alegría - espárragos - fusilar - espejo - evangelio - estatuto - arañas - impotencia - avispa - boletín - dientes - centinela -  comisionado - cristal - estilete -  predicador -  maestro - ballena - ajo - bastón - aguja - globo - peineta - serpiente - violencia - merengue - risa - machete - cementerio, \"",
+        "Id": 31
+    },
+    {
+        "Number": 32,
+        "Description": "\"   PUERCO MEDIANO - enemigo -  mulo -  camarón grande -  majá -  asesino -     Tres de copa -  pavo - hornilla -  broma -  visita -  alacrán - aborto - jabalí -  úlcera - pluma - vientre -  muela - dentista -  primo - albaricoque - cada - cantar - sueño -  armería - derrumbe - monte -  hielo - albañil - constructor - guindola -  merengue - corona - construcción - corbata - regocijo - diablo -  góndola -  manteca - milagro - morcilla - caer - seda - militar - vista -  nalga -  perro - guardia,\"",
+        "Id": 32
+    },
+    {
+        "Number": 33,
+        "Description": "\"  TIÑOSA - baraja - santo - dios -  camarón - música -  gavilán - artista - Tres de espada - cortada de serrucho - armero - madre - huevo - dulce - muñeco - altar - cruz - pan - muerto - basurero - nieve - muñeca - sarna - tragedia - llanto - bonito - Virgen de la Caridad -  vómito - verdugo - Cristo - testamento - automóvil - deporte - deportista - aurora - búho - bazo - deportación -  nube - uniforme - roble -  cerveza - muslo - olor - barrendero - excusao - actividad - afrenta - hambre - bofetón - plumas - esmeralda - fatigar - gangrena - jabón -  inundación - santo día - noche - garra - macho asao - praderas - saco - mono - vapor, \"",
+        "Id": 33
+    },
+    {
+        "Number": 34,
+        "Description": "\"   MONO - familia - negro - capataz - paloma - solución - listero - acacia - golpe de tablón -  miel - gorra -  velorio -  novio -  sopa - esfuerzo - jabón - mudo - desierto - venganza - granada -  violín - seno - títeres - puerco chico - pecho - piojos - cardenal - melón - parto - rencor - sapo - rayo - tos - locura - mulato -  piernas - parral -  paradero - adopción - apuesta - ama de casa - Tres de basto - aguacate - ama de leche - Cuba - presa - libretas - sombra - mosca - escopeta - huevo - sol - preguntas - majá - jicotea,\"",
+        "Id": 34
+    },
+    {
+        "Number": 35,
+        "Description": "\"   ARAÑA - novia - bombillo - mosquito - mariposa - jabalí - arco - avispa - carro fúnebre - gasolina - capa - compras - correr - escorpión - marfil - sepultura -  zapatero -  fogonero -  chulo -  burro - enamorado - beso - reja - golondrina -  perro - balcón - cenizas - correo -  copa - espina - hilo - mantel - negocio - osamenta -  piojos - compás - profecía - asno - sueco - agonía - desesperación - áncora -  naipe -  esponja - insenso -  sanguijuelas - comer - sortija - vapor - pescado grande,\"",
+        "Id": 35
+    },
+    {
+        "Number": 36,
+        "Description": "\"  CACHIMBA - teatro - bodega - opio - pajarito - boca - hombre muy rico -  santa -  ojos - cotorra - trabajo - tienda - sillón - sastre - botella - cafetera - aguardiente - familia -  amor - pecado -  charla - medias - operación - palma - lino - juego - odio - busto - vaso - coser - absceso - aguinaldo - querella - catarro - número - yedra - fosforera -  cardo - cero - coloso - cuna - peces - turbación - hueso - venado - marinero,\"",
+        "Id": 36
+    },
+    {
+        "Number": 37,
+        "Description": "\"   BRUJA - hormigas - carrera - gallina prieta - piedra fina - pato - seno -      parto -  motocicleta - perro policía - brujería - mono - comer - aguja - botica - avispa - dibujo - fusilar - cuchillo - mesa - carretera - vena - cacao - ciervo - gitano - hombre - pato macho -  lechuza - volar - rayo - Virgen de la Caridad - bendecir - declaración - caridad - preguntas - preso - súbete - estanque - gusano - hombres - matón - cerca - feria - puerco gordo - mariposa grande - mamar - judo - ruedo - baúl - colmena - lombriz - majá,\"",
+        "Id": 37
+    },
+    {
+        "Number": 38,
+        "Description": "\"   MACAO -  dinero - carro - goleta - barril - estoque - cacao -  bayoneta - montón - limonada - aguador - granos - bayamesa -  disolución - aguja - enano - comida - cuchara - camionero - silla - jícara - esmeralda - goce - pasta blanca - baile - alacrán -  carretel - bebida -  harina - piojos - adiós - ebrio - mujer - rodillas - guante -  gentes -  culebra - pulga - azufre - banquete - premio - utilidad - beber -  vasos - monaguillo - techo - limosnero - galleta - corona - chocolate - cigüeña - curandero - pineo - carretera - carretera - carreta - cachimba, \"",
+        "Id": 38
+    },
+    {
+        "Number": 39,
+        "Description": "\"   CULEBRA - rayo - baile - conejo - tintero - ladrón - mono - pelota - luna -   centro espiritista - mandarriazo - gallo - juicio - vaso - carpintero - mano - fusil - puerco - cuello - fresas - serpiente - centella - llagas - alacrán -  botella -  hacha - reptil -  mordedura -  burro - adjudicar - zapatero -  arañas - diadema - empeine - guisante - mango - olla - cascada - chicos - lágrimas - mago - gigante - criolla - aire - rollo - billete - guanajo - corazón - hígado - manzana - elefante,\"",
+        "Id": 39
+    },
+    {
+        "Number": 40,
+        "Description": "\"   CURA - sangre - cantina - maldito - bombero - mar - pica pleito - arpa - sábana -  ardilla -  pintor -  papalote - campo - gangrena -  harapos - salmón - calzoncillo -  cañero -  carretera -  blumer -  aurora -  limosnero -  niño malo - tienda - flecha - suerte -  precipicio - montura -  yegua - ron - cartero - país - Cuba - campana - tos - estatua - cruz - amazona - centinela - urna - aguardiente - puñal - rosario - dromedario - baile - compás -  malvado - sangre propia -  cantina - indígena - capilla - lagartija -  jicotea,\"",
+        "Id": 40
+    },
+    {
+        "Number": 41,
+        "Description": "\"   LAGARTIJA - prisión - jubo - pato pequeño - clarín -  bandolero - robo - brillar - bicarbonato - profeta - corona - lengua - juicio - preso - España - ciruelas - cielo - jardín - cama - cereza - brillo - capuchino - tíos - campesino - extranjero - rejuvenecer - chiflado - armas - billar -  Cuatro de oro - caguayo - bordado - malva - entraña - bobo - sicote - fresa - limón - puerca parida - estropeado - gamo - luna - culebra ciega - hidropesía - sonámbulo, \"",
+        "Id": 41
+    },
+    {
+        "Number": 42,
+        "Description": "\"   PATO - país lejano -  España - carnero - liga -  hija - gallego - tumba - primate - cielo -  ganso - lengua - tumulto -  música - piojos -  dados - boca - astillero - oro - lobo - sardina - rey - hielo - galleta dulce - cuarto - pollo - abismo - peste - mulo - miedo - Cuatro de Copa - grillo - novia - joroba - audición - arado - cielo, \"",
+        "Id": 42
+    },
+    {
+        "Number": 43,
+        "Description": "\"   ALACRAN - amigo - puerto - vaca blanca - jorobado - aceituna - picada - pasionista - borceguí - potrico - excremento de gato - amistad - sarna - jubón -  radio -  prima - cocodrilo -  caracol - junta - caimán - bujía - jabón - bayoneta - destornillador - laberinto - preso fugado - nabos - albaricoque - caballería - Cuatro de Espada - deshollinador - freír - prisión - campana - bayoneta - templo - hormiga - sala - jardín -  altar - preso - granizo - rábano, \"",
+        "Id": 43
+    },
+    {
+        "Number": 44,
+        "Description": "\"   AÑO DEL CUERO - infierno -  temporal -  año malo -  plancha - esclavo -    biajaca -  cerveza -  maldad -  despalilladora -  zapatos - tinieblas -  bando de gorriones -  aguacate - tarro -  herrero - tormenta - percha - entierro - comer - adiós - cabaña - senado - montura - cachimba - vino - llave - sardina - cerca - mucha hambre -  discurso - temblor - hermano - látigo -  canario - anécdotas -  comida - seca grande - barrera -  enfermo - guapo - tortillera - oración - plato - sábana - cojones - Cuatro de Basto - factor - jícara con pícara,\"",
+        "Id": 44
+    },
+    {
+        "Number": 45,
+        "Description": "\"   TIBURON - traje - presidente - carro eléctrico - estrella - político - sarcófago - blanca - revólver - bollos - televisor - tribunal - diablo - caballero - presilla - túnel - carnaval - altar - cementerio - comezón - corriente eléctrica - jutía - osamenta - obelisco - precipicio - casa - colmena - dragón - mosca - caña - tranvía - desierto - lenteja - abadía - águila - obispo - albahaca - vientre - arañas -  Cuba - tigre - cinto - salta - hombre real - ver - horquillas - corona,\"",
+        "Id": 45
+    },
+    {
+        "Number": 46,
+        "Description": "\"   HUMO BLANCO - hambre - guagua - ratón negro - puerco - hombres - jaiba - alcabú - chino - lleva y trae - hoja de tabaco - hombre grande - muslo - hurón -  yegua - cadenas - incendio - abandono - baile - indio - tabaco - hueso - lucero - tarro - chivo - trompo - fuerza - alcahueta,\"",
+        "Id": 46
+    },
+    {
+        "Number": 47,
+        "Description": "\"   PAJARO - mala noticia - escolta - sangre propia - losa - choza - traje - preso - carne - plato -     envenenamiento - casa de cita - fuente pública - alguacil - cidra - diablo - jaula - canción - yuca -  negro - puerco - justicia - legumbre - pescar - dios - eslabón - fortaleza -  flauta - arado - cometa - pasear - iglesia - salta - águila - criminal - gallo - aguacate - golondrina - declaración - ruiseñor - cuerno - acedía - mula - ilusión - tigre - escalera - sapo - escopeta - hilo - sátira - presidio,\"",
+        "Id": 47
+    },
+    {
+        "Number": 48,
+        "Description": "\"   CUCARACHA - abanico -  barbera -  cucaracha chiquita -  cubo - india - Sagua la grande - miel - círculo - aborto - timón - bomba - señorita - camino - bohemia - Cuba - cerca -  barbero - mosaico - ratón - incendio - jaula - jurel - borracho alegre -  parto - visita - cuero - pordiosero -  audición - alguacil - rosario - jabón - gambado - acero - calzado - muela - viaje - riqueza - bomba atómica - teatro - paja - cardo - desdén - foso - colmena - farmacia - pleito - coche - insensato - mañas - parral, \"",
+        "Id": 48
+    },
+    {
+        "Number": 49,
+        "Description": "\"   BORRACHO - riqueza - fecha - figurín - fantasma - yate - cojo - fogón - cama antigua -  dulce -  queso - come fana - cedro -  naranja - casa -   jabón de lavar - taberna -  incendio - tonelada - capilla - títeres - domingo - fajar - cordel - puerco - vinagre - jurado - vaso - capa - tesoro - abogado - aserrar - incienso - percha - fósforo - guanábana - fuerza - fortuna - alfiler - actividad,\"",
+        "Id": 49
+    },
+    {
+        "Number": 50,
+        "Description": "\"   POLICIA - alegría - alcalde - flores tiernas - picador - feroz - cañón - monstruo -  Virgen de la Caridad - agua -  árbol - cerebro -  cotorro - corbata - masón muerto -  zota de oro -  regalo - agua clara - mango - manteca - flor blanca -  año - tierra - agua fría - alondra - rosas - plato - bizcocho -  defensor -  doncella - general - uniforme - zorra - pozo - médico - ingleses - pineo - perico - cabeza - guardia - casabe - perfume - mercado - justicia - medicina,\"",
+        "Id": 50
+    },
+    {
+        "Number": 51,
+        "Description": "\"   SOLDADO - sed - sereno - borracho alegre -  presilla - guardia rural - cine - muerto - berenjena - ausencia - cenagal - ciprés - cuna - frisar - fuego fatuo - coralillo - raquitismo - polvo -  crespo - Cinco de Oro - tesorero -  señora - Cristo - limón - fuego - pichón -  trueno - olor - bodega - anteojo - destreza - pollo - sardina - pensamiento - nido - victoria - insensato,\"",
+        "Id": 51
+    },
+    {
+        "Number": 52,
+        "Description": "\"   BICICLETA - coche grande - abogado - tragedia con muerto - libretas - menta -   caimitillo -  fríjol gandul - fríjol - sardina - toro grande - juez - juicio - espejo - radio - hospital -  gamuza - pirámides -  armadura - aureolo - notario - juramento - riñones -  cigarro - zapato nuevo -  elefante - juguete - sangre - labrar - tristeza -  desgracia - labrador -  ruidos - día - traje - Cinco de Copa - torear - libro de cuentos - cocimiento - olivos - praderas,\"",
+        "Id": 52
+    },
+    {
+        "Number": 53,
+        "Description": "\"   LUZ ELECTRICA - prenda - dinamita - mulo grande - alguacil - mayoral -     hipomea - flor de tilo - bejucubí - radio - tijeras - abrazar - beso - pescado grande - música - barco - bate - misión - conejo - estudio - plomo - mulo - bonito - bombillo - tocador - estudiante - adquisición - bejuco - tragedia - Cinco de Espada - juez - andrajos - cabra - vómito - consejos - epitafio - sombrero - colmena - piedad - estudioso - regocijo,\"",
+        "Id": 53
+    },
+    {
+        "Number": 54,
+        "Description": "\"   GALLINA - flores - can sucio - iglesia grande - timbre - sepultura - pomarrosa - esfinge - ancla - borracho - fatiga - año - aborto - dulce - estudio - estudiante - palacio - oreja - olla - paloma - sueco - berro - muñeca - arco barril - trabajo - codorniz - viaje - pomada de rosas -  Cinco de Basto -  ciego -  anillo - guerra - mano - mudo - curiosidad - regalo - ciego - guinea - palma - copa - mulo - viento - seductora -  ganancia - grosellas - hoguera, \"",
+        "Id": 54
+    },
+    {
+        "Number": 55,
+        "Description": "\"   CANGREJO - baile - balas - bote chico - sello - murciélago - submarino - pez grande -  patilludo - dolor de cerebro - reja - cerca - oscuridad - pozo grande -  boca chiquita - isleño - bate - leña - peras - caída - langosta - bebedores -  derrumbe -  agonía - anatomía -  burla - joyas - mudanza - padre - reloj de pulsera - iglesia - mujer preñada - robo - velas - Zacatecas - carrillos - cenizas - comer - confesor -  mulo - bebito - radio - campesino - amigo - sombrero - caer - contador, \"",
+        "Id": 55
+    },
+    {
+        "Number": 56,
+        "Description": "\"   REINA - escorpión - piedra grande - buena cama - merengue - nieto - fetiche - batuta - ruido misterioso - mal olor - zanja - abejas - caña - pollo - cama revuelta - sábana - sombrero - rey - pecho -  cara - damas - soga - carta - cuartel - camisa - cojo - horno - molino - boticario - seda - pato grande - pavo - yuca -  montura - dolor de cabeza - perdiz,\"",
+        "Id": 56
+    },
+    {
+        "Number": 57,
+        "Description": "\"  TELEGRAMA - ángeles - cama - cangrejo fino - puerta - basílico - anís - pizarra - guardia rural - presidario - carta - acróstico - canto - carroza - mamey amarillo - trinchazo - poeta muerto - San Lázaro -  timbrazo - repetición de número - ajo -  periódico - mierda - ciudadela - cazar - rapto - predicador - calor - medias - paraguas - hilo - tierra - ladrón - sombrilla -  danza -  deportación -  cama vieja - ranas - estandarte - güiro - estrangular - fiesta,\"",
+        "Id": 57
+    },
+    {
+        "Number": 58,
+        "Description": "\"   ADULTERIO - retrato - cuchillo - sortija regalada - batea - amolador - piña de ratón - elevador - horganazo - ladrón -  haraganes - reloj - dedo -  prenda -  guayaba -  enfermera -  caballo -  hongo - trapecio -  familia - dientes - puerco - embarazo - camello - comadrón - ejército - ciego - fotografía - manantial - regalo - dolencia - espejo - azufre - presidente -  campamento - desobediencia - anillo -  helicóptero - mármol - parque - muerto vivo - radio - televisor - cuadro - féretro - prudente,\"",
+        "Id": 58
+    },
+    {
+        "Number": 59,
+        "Description": "\"   FONOGRAFO - araña negra - langosta - sol amarillo - loco - curandero - luces - pescados - piojos - cadera - casa - evangelio -  cuello - fecha - caravana de húngaros - clavícula rota - foto - buey - retrato - grulla - caña - sortija - hacha -  montaña - lagarto - cara - fruta - operación - juego - pecho - soldadura -  soldador - burro - flecha - sabio - pavo - dulce - bofetón - teta - borracho - sol - guapo - cotorra - carretera - depósito - marisco - salvia,\"",
+        "Id": 59
+    },
+    {
+        "Number": 60,
+        "Description": "\"   SOL OSCURO - pájaro negro - cómico - revólver - tempestad - gladiolos -     luz de luna -  lluvia -  apasote -  huevo - payaso -  bailar - correas - delirio de persecución - desconecto - pan - sal - barba - cuadro - té - luto -  camino -  ron -  noche oscura -  enamorado -  desconocimiento - ardilla - bestia - coliflor - bomba - azdón - abrigo -  cadáver -  enclenque - venta -  bajar - viento - ablución - murciélago - carretera -  farmacéutico - muro - granja,\"",
+        "Id": 60
+    },
+    {
+        "Number": 61,
+        "Description": "\"  CAÑONAZO - piedra -  boticario -  lámpara - saco - enfermedad - cañón - hoja - nieve -  aeroplano incendiado - morfinómano - arroz - foso - vaca flaca - seso - sol -  pueblo - sombrero - chipojo - revólver - cigarro - caballo grande - afrenta - caracol negro - bonito - calabozo -  pintor - sirena - cadalso - acueducto - destrozar - herida - Seis de Oro - canónigo - hierro - concierto -  campana - ensalada - pintar,\"",
+        "Id": 61
+    },
+    {
+        "Number": 62,
+        "Description": "\"   MATRIMONIO - nieve - visión - espada grande - carretilla - foca - teja - nube -      gandinga - palpitaciones en el corazón - ahijado -  Santa Bárbara - lámpara - cebolla - bicicleta - jarro - esclavitud - verdolaga - cesta - puerco chiquito - jurar - descanso - copa - bellotas - academia - padrino - regimiento - biblioteca -  Seis de Copa - fuego - máscara - peo - sol - vicio - partes sexuales - sermón,\"",
+        "Id": 62
+    },
+    {
+        "Number": 63,
+        "Description": "\"   ASESINO -  tarro - bandido - escolta - escalera - cepo - abogado - paseo - matón - alpestre - ferrocarril -  soquete -  escoba -  enfermedad del pecho - cigarro - cruz - Revolución - espada - coronel - áncora - baúl - nabos - desorden - pazco -  sangre - lágrima - ciudad - Biblia - rival - caracol -  cuervo - anciano - oscuridad -  lucero - tanque - cárcel - cuerno - Seis de Espada - enemigo - totí,\"",
+        "Id": 63
+    },
+    {
+        "Number": 64,
+        "Description": "\"  TIRO - maromero -  relajo chiquito -  bruja negra -  baraja - goloso - muerto grande -  yugo - beso -  manjúa - noche - estudioso -  cumplido - reír - peregrino -  escalera de caracol -  mango -  chino - sijú - padrino - sombrero - rosa - maracas -  panadero - instrumento - candela -  agua sucia -  artista - marinero - sangre - llave - miedo - adulterio - estudio - alumno - ajo - infierno - paradero - jubo - risa - órgano - rifle - palangana - falta - aflicción - beneficio - regalo - Seis de Basto - cepillo,\"",
+        "Id": 64
+    },
+    {
+        "Number": 65,
+        "Description": "\"   CARCEL - comida - ventana - estrella brillante - trueno - azogue - amor -  fríjol - techo - periódico - lámpara -  tutifrute -  chimenea -  cola - habas -  lecho -  Zacatecas -  muerto - palizada - curiel -  aconsejar - zoquete - faisán - piedra grande - titiritero - polizonte - bruja negra - juez - gordo - arañas - volar - preso - escalera -  puerta - aretes - loma - cicatriz - nabos - cadera - blanco - fiscal - arroz - dulce - granada - divorcio,\"",
+        "Id": 65
+    },
+    {
+        "Number": 66,
+        "Description": "\"   DIVORCIO - máscara -  tarro -  reloj de muñeca -  postalita - bebida -  pareja de yeguas -  yunta -  basura - chocolate -  cañón -  cerradura -  arrecife -  quejido a media noche -  algodón sucio - radio - ojos - candela grande - mellizos mujer preñada -  madre - trueno - amor - templo -  estrella - bautizo -  hachazo -  cabeza -  abandono - seña -  discusión - mordaza - cuchillo - higo - nuez - traición - excusao -  venganza - entierro -  buñuelo - vianda - teta - ramera - torrente,\"",
+        "Id": 66
+    },
+    {
+        "Number": 67,
+        "Description": "\"    PUÑALADA - autoridad -  templo -  cuchillo en uso - zapatos - globo - baba -  cardenal -  bautizo -  ofrenda -  vello -  galantería - labrar - dolor de rótula -  machetazo en la cabeza - espina - higo - tumba - relajo grande - clavo - peluca - hierro - pelota -  sexual -  gavilán - odontología - hombre - algodón - cartas - abordaje - alfiler - mudanza - limpia botas - relámpago - pájaro - almendra - destierro - restaurante - guardia - funda - automóvil - abeja - tienda - reloj - barómetro - santo - gorro - disputa - impotencia,\"",
+        "Id": 67
+    },
+    {
+        "Number": 68,
+        "Description": "\"   CEMENTERIO -  globo - fonda - para acá para allá - minero - antepasados -     dolor de muelas -  algodón -  gavilán - cáncer - carretero - convento - café -     hombre con manopla - montecristo - canción criolla - fuente - busto - clavo -  señorita - fiera - almanaque - chino - cine - banca - eco - mujer tarrúa - artista - cuchillo - locura - medio - policía - sardina - sepultura - muerto - bolos - ojos - pozo - café claro -  cigarro - palacio - médico - horca -  polillas,\"",
+        "Id": 68
+    },
+    {
+        "Number": 69,
+        "Description": "\"  POZO - fiera - vagos - barril grande - polvorín - relajo grande - loco - artista de cine -  ajo - foco que parpadea -  canción criolla - luto - chinela - varadero - falda - mantel -  monte -  campo -  perico -  bollo pelao - chino -  pavo real -  perro negro - bola - lijoso - chicharrón - jinete - multa - fiebre - río sucio - león - casa vieja - loma -   matadero - eclipse - acostado -  abordaje -  pimienta - pelota - adulterio - oso - aparición - diccionario -  peluquero - lavandero -  teléfono - bollo grande - guanajo -  sacristán -  peluca - bollos,\"",
+        "Id": 69
+    },
+    {
+        "Number": 70,
+        "Description": "\"   COCO - frío - teléfono - perro negro - bala - tiro - telegrama - cucaña - dicha - automóvil - ñato - botella - campiña - cero - escribir - tórtola - vino - canción criolla - chalet lujoso - hospital - luto - espárragos - liga - cuerpo - caballo grande - caja - gallina - chicharrón - jinete - oveja - empresa - heno - arco iris - postre - fortaleza - patizambo - tíos - turbación - saco - vieja - tortuga, \"",
+        "Id": 70
+    },
+    {
+        "Number": 71,
+        "Description": "\"   RIO - sombrero - pantera - serrucho chiquito - relámpago - raza - baño -     mosca verde - plaza del mercado - purgante - ranas - playa - caballo -  fusil - mercado -  cadáver - rosas - alimaña - fuente - frío - pato - riachuelo - agua clara -  número -  esqueleto - cartera - visión -  armario - pelo - banderilla - lámpara - peinado - perro - paraguas - anguila - puente - carnicería - hortiga - antorcha -  tenedor - hidropesía - yarey - Siete de Oro - tronco - vecino - limosnero - manco -  cáncer - vajilla - armería - peine, \"",
+        "Id": 71
+    },
+    {
+        "Number": 72,
+        "Description": "\"   FERROCARRIL -  buey -  collar -  manzana - relámpago -  jicotea - Roma -      machete - ingeniero - toro bravo - fuente - cabilla - tronco - culebra - cetro -     matraca - repique - dos curas en la carretera - calle - caballo - cama -     mariposa de colores -  serrucho -   cafetera -  estrella -  llanura - teléfono - vajilla - río sucio -  pulmón - sillón -  arzobispo -  aneurisma -  amiga -  Siete de Copa -  novia - terminal - colchón - amatista - andrajos -  tren de carga - pelo - cabellos - taberna, \"",
+        "Id": 72
+    },
+    {
+        "Number": 73,
+        "Description": "\"   PARQUE - navaja - maleta - piña agria - cigarro - sobre - quiromántica -     mudada de noche -  electrocutado -  niño grande -  burro - pavo real - pila - pena - viaje -  naranja -  mueble - juicio -  sala -  diligencia - navajazo - lodo -   costurera - leche - tren - yunque - cascada - plumas - agua - puente - ajedrez - orinar - espía - niño malo - bobo - mitología - bandera -  batirse - Siete de Espada -  cafetera -  cascada - comedia - almohada -  alpargata - sombrilla - florestas - paraíso,\"",
+        "Id": 73
+    },
+    {
+        "Number": 74,
+        "Description": "\"  PAPALOTE - culebra chiquita -  militar - escobillón - tarima - berro - costurera - pinchazo - uñas -  amiga -  cólera -  columna - leer - pino - antorcha - picada de bibijagua - dinero en billetes -  dulce -  nido - cartera - guitarra - jabón - viento - piña - noche - péndula - príncipe - macho grande - guineo -  sobre -  lechuza -  mudanza - culebra ciega - serpiente - coronel - paloma - reina - bosque - azotar -  sabanero - carbón - negocio - capa - ruines - violín - Siete de Basto - muleta - mulato - negro - pelota - preciso - ruinas,\"",
+        "Id": 74
+    },
+    {
+        "Number": 75,
+        "Description": "\"   CINEMATOGRAFO - viento - guitarra -  caja de hierro - kiosco -  surco - perro mediano - cine - rumba - pleito - tapa - bien - artesano - veleta - estampida - mordida de perro - perro con rabia - iglesia - escorpión - corbata - leche - corazón -  ranas -  bayoneta - copa -  culebra - sapo - afeitar - tempestad - aceite - limpia botas - flores - marfil - mostaza -  pordiosero - carestía - coloso - sed - terremoto -  goma - maletín -  costurera - actriz - diente - vecinos,\"",
+        "Id": 75
+    },
+    {
+        "Number": 76,
+        "Description": "\"   BAILARINA -  humo negro -  iluminación - sarcófago - sorpresa - teatro - asiento de tren - limón - compras - compás - fábula - galopar - orinal - hilo contrato - Cueva de bellamar -  babosa -  marihuana - chimenea - uñas - perfume - mujeres - sombrilla - luna llena -  droga - ilusión -  urgente - pobre - jabón - brazo - hierro - lámina -  anafre - violín - animal -  sexo - loma -  papalote - monumento - vestido - sortija - rana - padre - puerta - barbero - reina - bandera - viajero -  fruta bomba - verdugo - mariposa,\"",
+        "Id": 76
+    },
+    {
+        "Number": 77,
+        "Description": "\"   BANDERA - guerra -  billetes -  bandera extranjera - ánfora - piloto - muletas de San Lázaro - mesa de comer - espectros - galeoto - tropel - inquietud -  guardia civil -  pararrayos - aguja - trinchera - carbón - bastón - bolitero - collar - colegio - cartel - droga - pavo real - riña - cintura - soldado - campaña - calor - abordaje -  altar - pájaro - taberna - cuba - cuenca - gato - sarcófago - hilo de coser - escudo - pelota - aguinaldo - bandido,\"",
+        "Id": 77
+    },
+    {
+        "Number": 78,
+        "Description": "\"   OBISPO -  tigre - rey -  tren de carga - lunares - sarcófago -  música - pleito de perros y gatos - aldabón - guagua - guanábana - Papa - yate - cementerio viejo - presidente - casa grande -  Fidel - avispa -  soga - tijeras - gato - tienda - pleito - batallas - colmena - cardenal - galgo -  guisazo -  muerto vivo - ombligo -  moneda -  iluminación -  suicidio - apetito - bandera extranjera - sacristán - parque - carnero - naranja - vela - casa nueva - luz - escopeta - objeto - ahogado - guisado,\"",
+        "Id": 78
+    },
+    {
+        "Number": 79,
+        "Description": "\"   COCHE - lagarto grande - tren - luna llena - dulce - pedazo de muela - aseo - acera - esqueleto de insecto - picazón de nariz - ahorcado - ahogado -  guanajo - silla - hogar - leche - fresas - presidente - terciopelo - puerco - yegua negra - aura - chipojo - cojear -  camino - freír -  barrer -  monumento -  autor - seña -  sombrero - pozo - quemar - maíz - mantel - abogado - serrucho - armario - auto - brazo - imagen,\"",
+        "Id": 79
+    },
+    {
+        "Number": 80,
+        "Description": "\"   MEDICO - buena noticia -  paraguas - navaja en uso - trompo - guagua -      esqueleto - almohadilla - nerviosidad - teléfono roto - pies - bahía - hospital - fama - semilla - cine - sal -  calzoncillo -  embarazo - luz - colchón -  pantalón - barco -  soledad - trampa -  luna nueva - tambor - barba -  vecino - apagador - termómetro - sombrilla - boleto - soldado - camilla - riachuelo - violencia -  mancha -  intestino - desesperado - coraza - estilete - receta - bomba - sombrilla,\"",
+        "Id": 80
+    },
+    {
+        "Number": 81,
+        "Description": "\"   TEATRO -  barco - ingenio - navaja - vieja mala -  cuerda -  muerto a cabilla - caída - dulce - espectáculos - escándalo - beber - cántaro - esqueleto - comodidad -  navegar -  encuentro de herradura -  José Martí - reloj - labios - revista - río chiquito - nacimiento - pavo -  góndola - palma - dios - abrigo - martillo -  pared -  teléfono -  hijo -  gorra - nudo - cordero -  artista -  país lejano -  cañón -  actriz - avena - pérdida - Ocho de Oro - viudedad - macho asao - soga - carpintero - ají -  burro -  ingeniero,\"",
+        "Id": 81
+    },
+    {
+        "Number": 82,
+        "Description": "\"  LEON - pleito - batea - limosnera - muelle - madre - aguijón - librero - nube -   diamante -  bandido -  platillo - eslabón de hierro - abrigo - ciclón - caída -  estrella - chivo -  tortillera - pinga chiquita -  día - goma toro - camisa - cobre - fruta - ojos - camino - hormigas - hierro - broma - astilla - arco triunfal -  aposento - pargo - sanguijuelas - habichuela - lavar - casamiento - oso -  balanza - Ocho de Copa - pleito en cine - velo - madre vieja - leopardo - balcón - clavo - banco -  caverna -  círculo - ganado - balance - trabajo voluntario -  párpado - tigre - sueño,\"",
+        "Id": 82
+    },
+    {
+        "Number": 83,
+        "Description": "\"   TRAGEDIA -  procesión - bastón - mar - madera - hierro - abanico - hoja - historia de cuba - encuentro de un brillante - pánico - amor - oso - diamante - piña - semilla - sueño - reina - dinero grande - peligro - herida - riña - dádiva -  discusión - avión alto - muerto - hoz - aeroplano - líos - maricón - inundación - aeropuerto -  tierra - moneda - proyección - nube - comisión - hombre - plata - ramilletes - sastre - Ocho de Espada - comisionado,\"",
+        "Id": 83
+    },
+    {
+        "Number": 84,
+        "Description": "\"  SANGRE CUBANA - ciego - banquero - espejo grande - bohío - sastre - rincón - dúo - vapor - caso - percha - fruta - tambor -  escritor - bodega - comezón - audiencia - simulacro de bombero -  muerto que habla - Ocho de Basto - radio - gritos - riñones - asentar - sombra - bandera - baraja - beber - bebida - brocha - cofre -  homicidio - traje - cerrajero - mano - ángel - sacerdote - candela - guitarra - morir - pelado - romero - mono grande - familia - jimagua - barrio - mar - banquete - bastón - tren,\"",
+        "Id": 84
+    },
+    {
+        "Number": 85,
+        "Description": "\"  MADRID - águila -  reloj grande -  ardilla -  guano -  avión - espejo - asta - dolor de estómago - ama de leche - casamiento - grulla - cantar -  medicina - poesía antigua - chicharrón -  espuma - abejas - comadreja - despertador - avispa -  espuma - alegría - inundación - peluquera - terraza - absceso - desafío - gavilán - abandono - médico - ama de casa - aeroplano - zarzal - gastralgia - reloj despertador - enfermera - anguila - cuerpo - reloj de pared - profesión,\"",
+        "Id": 85
+    },
+    {
+        "Number": 86,
+        "Description": "\"   CONVENTO - marinero viejo -  tijeras - baúl grande - palma - hermano - cine - candela grande - lápiz - basura -  bota - piernas - indigestión - cera -  muerte de amigo - lata - viaje a la luna -  gallego - loco -  ballena -  desnudez - tierra - hada - combate marino - escoba de palma - manguera - sombrilla - pelo largo -  baraja - fiebre - mochila - niño -  ardilla - casarse - indio - viento - tienda - bonito - cuero - mochuelo - piojo - bandera -  zoológico - jeringuilla - hijo - hospital,\"",
+        "Id": 86
+    },
+    {
+        "Number": 87,
+        "Description": "\"   NEW YORK - paloma chica - plátano - espejuelos modernos - fuego - mar - plato - voces -     viaje por mar - patines - telegrama a media noche - capitolio - nuez - alegría -  mapa - cama - herida - carretera - nariz - puerta - milagro - lira -  palmita -  tojosa -  improvisar - claustro - vanidad - viejo - lirios - avellana - arlequín - pan - mantel - bufete - fatigar - hierba - presa -  milagro - madera,\"",
+        "Id": 87
+    },
+    {
+        "Number": 88,
+        "Description": "\"   ESPEJUELOS - gusano - vaso - viejo grande - aduanero - muerto grande - vago - veneno - tierra - garrote -  ron - calabaza china - chiva muy crecida - ron - río grande - casa vieja -  ayuno - árbol - piña - anteojo - hueso - loma - bibijagua - aldea - abanico -  bala de cañón -  lechuza - perla - testamento - dorado - piojos -  aceite - velorio -  jicotea -  madera -  uvas - pleito en velorio -  palos -  tortuga -  pena -  madre - aciago - cifra - cisne - cojo - desnudez - emboscada - excusas - favores - liebre - lechuga - copa - boniato - escuela - viaje - camerino - restaurante - celo - ramilletes - abuelo,\"",
+        "Id": 88
+    },
+    {
+        "Number": 89,
+        "Description": "\"   LOTERIA - agua - cometa -  casa vieja -  tesorero - estrella - zorra -  malvado - factor - ola de frío - tirante - terreno - latazo - volante - tesoro - ahogado - melón - loma - mona -  vieja - torero - vaso - pastel - acusación - apuesta - infierno - plato - tartamudo -  comilón - velada - vaca grande - remos - candela - ahorcado - bazo - frente - profecía - viejo grande - cadena - convento - oreja - pomo - camello - playa - perico - hoja - mundo - banco,\"",
+        "Id": 89
+    },
+    {
+        "Number": 90,
+        "Description": "\"   ESPEJO -  asesino - caramelo - pájaro negro - temporal - viejo - dinero - camello - viento - familiar muerto - garaje - parque infantil - reloj de pared -  arroz - San Lázaro - camión - frijol - jarabe - indio - globo - indígena - pastor - águila - alcachofas - ascensión - bancarrota - zanja - violeta - palma - calderos - frío - casabe - cristal - palangana - murciélago - sal - traición - faro,\"",
+        "Id": 90
+    },
+    {
+        "Number": 91,
+        "Description": "\"   TRANVIA - limosnero - alpargata - león negro - anarquista - sal - juez -  abridor de latas -  varilla de paraguas - juego de tenis - zumbido cobo lucio - lombriz grande -  viejo con bastón - robo - comerciante - sol frío -  sorteo - oído -  arroz crudo -  padre - traición - ingenio - perfume - calabozo - lápiz - campanilla - pato chico - burro - sastre -  acta -  bulla -  simular -  muerto que habla -  bohío - flecha - fruta -  Nueve de Oro - bodega - vajilla - chancleta - brocha - ancianos - bolsa - pordiosero - mariposa,\"",
+        "Id": 91
+    },
+    {
+        "Number": 92,
+        "Description": "\"  GLOBO - suicidio - Cuba - guerra en el aire - anarquista - esqueleto - puerco gordo - comida - bosque - calabaza - habichuela - flojera - pozo - cólico - pato grande - gato grande -  rabo -  correr - aire -  policía - cantador - almuerzo - conquista -  cantar - merengue - enigma - visita - clavo - Nueve de Copa - poesía - chicharrón - medicina - hielo - lejía - manteca - andamiada - calabozo - garganta - avión - sortija de oro - mariposa de color - comedia - ambulancia - aeroplano - alma - sal - huerto,\"",
+        "Id": 92
+    },
+    {
+        "Number": 93,
+        "Description": "\"   MACHETE - mariposa de colores - sortija - leontina - libertad - misa -  revolución - escoba de palma - loco - granada - presidente - flores - lápiz - mariposa amarilla -  sombrero grande -  vitaphone -  fruta extranjera -  melao -  velorio - nariz - vieja -  hombre - guerra - nieve - nivel - búho - adjudicación - charla - cardenal -  combate -  montura -  palma -  Nueve de Espada - venganza - viaje a la luna - adopción - ancianos - morcilla - general - marinero - desesperación - muerte de amigo - corriente - lata - sombrilla - pollo grande - guagua - jubón - lechuza - gavilán - nieto - masilla - barco,\"",
+        "Id": 93
+    },
+    {
+        "Number": 94,
+        "Description": "\"   MACHETE - andarín -  Habana - alacrán negro - flores - flor marchita - cepillo - mercader - botón -  Madrid -  capitolio -  país lejano - hora -  luto - maní -  rosas -  mosquito del monte - cabilla -  perfume - montura - melón - cartilla - sueño -    administración - viaje por mar -  mapa -  telegrama - jabalí -  Nueve de Basto -  mitología -  velorio -  yedra -  cama - mariposa grande - corona,\"",
+        "Id": 94
+    },
+    {
+        "Number": 95,
+        "Description": "\"   GUERRA EN EL MAR -  perro grande - Matanzas - chancleta - Revolución -     guerra civil - perro lanudo - pelo - mujer chismosa - ardilla - espada -      huracán -  barquilla de oro -  miracielo - archivo - toro - tierra - submarino -  cielo - cirujano - alacrán grande - espalda - atragantar - calabaza china - río grande - casa vieja - altura, \"",
+        "Id": 95
+    },
+    {
+        "Number": 96,
+        "Description": "\"   MOSQUITO DEL MONTE - mujer buena -  periódico - sinsonte - pícaro -  yuca - escorpión - zapatos - fruta - choque de autos - ajo - costillas -  medicina - viaje a caballo - una mano descompuesta - rayos x - azar - desmayo - maíz - amputación - tesoro - prostituta - frío - rocas - zanja - ángel - piragua - desafío - volante - adulterio - latazo - mesa redonda - fiesta - terreno - casa vieja - malvado - jamaicano - guagua - viejo - abuela - perro chiquito - yegua,\"",
+        "Id": 96
+    },
+    {
+        "Number": 97,
+        "Description": "\"   MOSQUITO DEL MONTE - mono viejo - grillo de ciudad - entierro mañana -      limosnero -  mono suelto -  rosas en el suelo -  chorizos -   espejo - baraja -   gato -  hallazgo de armas y municiones -  regalo pequeño - millo - bota - maíz - carretera - camello - voraz - cabra - trigo - niño -  autopsia - portal - ateje - campana -  acreedor -  botica -  arsenal -  asesino - garaje - gusano -  parque - San Lázaro - zodiaco - sobre -  negro grande - dinero grande -  familiar muerto - limosna - mazorca - cebra - carbóm - gaveta -  murciélago - lengua - salón,\"",
+        "Id": 97
+    },
+    {
+        "Number": 98,
+        "Description": "\"   PIANO -  visitar - traición - candela grande - ortofónica - león - abuso - plancha - dolor de piernas -  miracielo -  ternero muerto -  paraje - animales - vajilla - cigüeña - fantasma - perfume - hortiga - borracho - castillo - código - guerra - loma - jabón - queso - batey -  entierro grande - sal - abridor de latas - humo negro -  lombriz - burro -  viejo con bastón - paraguas - amigos - mariposa grande -  madera -  fortaleza -  frisar -   gamo -  sacerdote - tempestad - bollo grande - engaño,\"",
+        "Id": 98
+    },
+    {
+        "Number": 99,
+        "Description": "\"   SERRUCHO GRANDE -  gallo chico -  carbonero -  temporal con víctima - frío - fonógrafo - inventario - paseo por el campo - calculo -  insomnio - granada -  niño perdido -  murciélago muerto -  radio -  as de basto - carretón de basura -  chincha - piojos -  bolitero - carbón - cosecha - familia grande - lluvia -  riqueza -  viento -  verduguillo -  tierra -  fosforera - cabeza - albergue - flojera - esqueleto - habichuela - odio -  torno - roble - escalera - chimenea - pulga - candela grande - compota - candado,\"",
+        "Id": 99
+    },
+    {
+        "Number": 0,
+        "Description": "\"   AUTOMOVIL - Cristo - paradero - policía joven - derrumbe - sala - pan - matón - excusao - esposo - majá - ambulancia - ojos - anteojo - flojera - jimagua - jugador - maíz - verdugo - golpe en la espalda - carretera - odio - planeta -  llanto -  cabeza - llagas - vino - acacia - castaña - loma - espejuelos - hoyo - alacrán grande - boda - alcalde - acusador - inundación - mejorana - laurel -  rencor - víscera - cigarra - ulcera - cubículo -  humareda - sueco - santo - santero - juego - plomero - presidente - col - abrazar - halcón - arrendar - balcón - desertor - disolución - pantano - velorio -  sortija - extranjero - granada - flores - loco - cisterna -  fealdad -  gallina clueca - baraja - querella - naipe - viña - vacuna - inodoro - esfuerzo - estornudo - refrigerador - insolencia - varadero - cabo - culebra,\"",
+        "Id": 100
+    }
+]

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DataBaseLocalService.Services
 {
@@ -24,15 +25,21 @@ namespace DataBaseLocalService.Services
         IDataAccess _dataAccess;
 
         #endregion
+
+        #region Constructors
+
         public DataAccessService(IDataAccess dataAccess)
         {
             _dataAccess = dataAccess;
 
             int count = _dataAccess.GetList<DrawingResultLocal>(false).Count;
+            int countCabalaValues = _dataAccess.GetList<CabalaNumbersLocal>(false).Count;
+            int amountWords = _dataAccess.GetList<CabalaWordsLocal>(false).Count;
 
-            if(count == 0)
+            #region Loading drawings in SQLite database from  json files
+
+            if (count == 0)
             {
-                #region Load values in SQLite database from  json files
 
                 List<DrawingResult> drawingResultList;
 
@@ -48,9 +55,45 @@ namespace DataBaseLocalService.Services
                 List<DrawingResultLocal> drawingResultLocalList = ConvertDrawinToDrawingLocalList(drawingResultList);
                 Save<DrawingResultLocal>(drawingResultLocalList);
 
-                #endregion
 
             }
+            #endregion
+
+            #region Loading data in Cabala database local from json files
+
+            if (countCabalaValues == 0)
+            {
+                List<Cabala_Number> cabalaNumbers;
+                List<Cabala_Word> cabalaWords;
+
+                var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DataAccessService)).Assembly;
+                Stream streamNumber = assembly.GetManifestResourceStream("DataBaseLocalService.Data.cbN.json");
+                Stream streamWord = assembly.GetManifestResourceStream("DataBaseLocalService.Data.cbW.json");
+
+                using (var reader = new StreamReader(streamNumber))
+                {
+                    var json = reader.ReadToEnd();
+                    cabalaNumbers = JsonConvert.DeserializeObject<List<Cabala_Number>>(json);
+
+                }
+                using (var reader = new StreamReader(streamWord))
+                {
+                    var json = reader.ReadToEnd();
+                    cabalaWords = JsonConvert.DeserializeObject<List<Cabala_Word>>(json);
+
+                }
+                List<CabalaNumbersLocal> cabalaNumbersLocal = ConvertNumberToNumberLocalList(cabalaNumbers);
+                List<CabalaWordsLocal> cabalaWordsLocal = ConvertWordToWordLocalList(cabalaWords);
+
+                Save<CabalaNumbersLocal>(cabalaNumbersLocal);
+                Save<CabalaWordsLocal>(cabalaWordsLocal);
+
+
+
+            }
+
+            #endregion
+
 
 
             _numberList = new List<int>()
@@ -59,6 +102,12 @@ namespace DataBaseLocalService.Services
             };
 
         }
+
+        
+
+        #endregion
+
+
 
         #region Methods
         private List<DrawingResultLocal> ConvertDrawinToDrawingLocalList(List<DrawingResult> drawingResultList)
@@ -100,6 +149,70 @@ namespace DataBaseLocalService.Services
             return list;
         }
 
+       
+
+        private List<CabalaNumbersLocal> ConvertNumberToNumberLocalList(List<Cabala_Number> cabalaNumbers)
+        {
+            List<CabalaNumbersLocal> list = new List<CabalaNumbersLocal>();
+            foreach (var cabalaNumber in cabalaNumbers)
+            {
+                list.Add(
+
+                    new CabalaNumbersLocal()
+                    {
+                        Description = cabalaNumber.Description,
+                        Number = cabalaNumber.Number
+
+                    });
+            }
+            return list;
+        }
+
+        private List<CabalaWordsLocal> ConvertWordToWordLocalList(List<Cabala_Word> cabalaWords)
+        {
+            List<CabalaWordsLocal> list = new List<CabalaWordsLocal>();
+            foreach (var cabalaWord in cabalaWords)
+            {
+                list.Add(
+
+                    new CabalaWordsLocal()
+                    {
+                       Numbers = cabalaWord.Numbers,
+                       Word = cabalaWord.Word
+
+                    });
+            }
+            return list;
+        }
+
+        private Cabala_Number ConvertCabalaNumberLocalToCabalaNumber(CabalaNumbersLocal cabalaNumberLocal)
+        {
+            return new Cabala_Number()
+            {
+                Number = cabalaNumberLocal.Number,
+                Description = cabalaNumberLocal.Description
+            };
+        }
+
+        private List<Cabala_Word> ConvertWordLocalListToWordList(List<CabalaWordsLocal> cabalaWordLocalList)
+        {
+            var list = new List<Cabala_Word>();
+            foreach (var wordLocal in cabalaWordLocalList)
+            {
+                list.Add(
+                    new Cabala_Word()
+                    {
+                        Word = wordLocal.Word,
+                        Numbers = wordLocal.Numbers
+                    });
+            }
+            return list;
+        }
+       
+        #endregion
+
+        #region Implementations IDataAccessService
+
         public List<DrawingResult> GetDrawingResultHistory(DateTime initialDate, DateTime finaldate)
         {
             var drawingResultLocalList = _dataAccess.GetList<DrawingResultLocal>(false)
@@ -109,10 +222,21 @@ namespace DataBaseLocalService.Services
             return drawingResultList;
         }
 
-      
+        public Cabala_Number FindByNumber(int number)
+        {
+            var cabalaNumberLocal = _dataAccess.GetList<CabalaNumbersLocal>(false)
+                       .Find(c => c.Number == number);
+            return ConvertCabalaNumberLocalToCabalaNumber(cabalaNumberLocal);
+        }
 
+
+        public List<Cabala_Word> FindByWord(string word)
+        {
+            var cabalaWordLocalList =  _dataAccess.GetList<CabalaWordsLocal>(false)
+                                                 .FindAll(c => c.Word.ToLower().Contains(word.ToLower()));
+            return ConvertWordLocalListToWordList(cabalaWordLocalList);
+        }
         #endregion
-
 
 
         public void Save<T>(List<T> list) where T : class
@@ -131,6 +255,8 @@ namespace DataBaseLocalService.Services
             return _numberList;
         }
 
+      
 
+       
     }
 }

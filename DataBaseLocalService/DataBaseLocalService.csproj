@@ -5,10 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\cbN.json" />
+    <None Remove="Data\cbW.json" />
     <None Remove="Data\test1.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Data\cbN.json" />
+    <EmbeddedResource Include="Data\cbW.json" />
     <EmbeddedResource Include="Data\test1.json" />
   </ItemGroup>
 

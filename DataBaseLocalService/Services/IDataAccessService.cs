@@ -8,5 +8,7 @@ namespace DataBaseLocalService.Services
     {
         List<DrawingResult> GetDrawingResultHistory(DateTime initialDate, DateTime finaldate);
         List<int> GetNumberList();
+        Cabala_Number FindByNumber(int number);
+        List<Cabala_Word> FindByWord(string word);
     }
 }
