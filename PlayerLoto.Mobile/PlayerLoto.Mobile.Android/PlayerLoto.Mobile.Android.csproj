@@ -81,6 +81,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\Config.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,6 +113,10 @@
     <AndroidResource Include="Resources\drawable\florida_lotto.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DataBaseLocalService\DataBaseLocalService.csproj">
+      <Project>{A8631321-2C36-4306-A19D-634A0F964269}</Project>
+      <Name>DataBaseLocalService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PlayerLoto.Mobile\PlayerLoto.Mobile.csproj">
       <Project>{08184E8D-F4EE-43B1-BBFD-C3FBB6845243}</Project>
       <Name>PlayerLoto.Mobile</Name>

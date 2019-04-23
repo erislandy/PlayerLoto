@@ -41,16 +41,18 @@ namespace QueryDrawingResultsModule.ViewModels
         #region Services
 
         private readonly INavigationService _navigationService;
-        private readonly DataAccessService _dataAccessService;
+        private readonly IDataAccessService _dataAccessService;
 
         #endregion
 
         #region Constructors
-        public DayHistoryViewModel(INavigationService navigationService, DataAccessService dataAccessService)
+        public DayHistoryViewModel(INavigationService navigationService, IDataAccessService dataAccessService)
         {
             _dataAccessService = dataAccessService;
             _navigationService = navigationService;
-            var list = _dataAccessService.GetDrawingResultHistory();
+            var initialDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            var finalDate = DateTime.Now;
+            var list = _dataAccessService.GetDrawingResultHistory(initialDate, finalDate);
 
 
             DrawingResultList = new ObservableCollection<DrawingResult>(list);
@@ -101,10 +103,7 @@ namespace QueryDrawingResultsModule.ViewModels
             var parameterType = (ParameterType)parameters["parameterType"];
             var number = (int?)parameters["number"];
 
-            var filterByDate = new DrawingResultLocalFilterByDate(
-                                                                        _dataAccessService,
-                                                                        initialDate,
-                                                                        finalDate);
+            var filterByDate = new DrawingResultLocalFilterByDate(_dataAccessService,initialDate,finalDate);
             var filterByType = new DrawingResultFilterByType(filterByDate, drawingState);
 
             var filterByParameter = new DrawingResultFilterByParameter(filterByType, number, parameterType);

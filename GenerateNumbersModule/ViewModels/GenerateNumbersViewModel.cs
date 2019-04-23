@@ -30,12 +30,12 @@ namespace GenerateNumbersModule.ViewModels
 
         #region Services
 
-        DataAccessService _dataAccessService;
+        IDataAccessService _dataAccessService;
 
         #endregion
 
         #region Constructors
-        public GenerateNumbersViewModel(DataAccessService dataAccessService)
+        public GenerateNumbersViewModel(IDataAccessService dataAccessService)
         {
             Text = "";
             GenerateNumbersCommand = new DelegateCommand<string>(GenerateNumbersMethod);

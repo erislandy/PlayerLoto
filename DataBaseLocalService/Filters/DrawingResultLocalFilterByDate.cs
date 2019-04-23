@@ -18,11 +18,11 @@ namespace DataBaseLocalService.Filters
 
         #region Services
 
-        DataAccessService _dataAccessService;
+        IDataAccessService _dataAccessService;
 
         #endregion
 
-        public DrawingResultLocalFilterByDate(DataAccessService dataAccessService, DateTime initialDate, DateTime finalDate)
+        public DrawingResultLocalFilterByDate(IDataAccessService dataAccessService, DateTime initialDate, DateTime finalDate)
         {
             _initialDate = initialDate;
             _finalDate = finalDate;
@@ -30,8 +30,8 @@ namespace DataBaseLocalService.Filters
         }
         public List<DrawingResult> Filter()
         {
-            return _dataAccessService.GetDrawingResultHistory()
-                                     .FindAll(d => d.Date >= _initialDate && d.Date <= _finalDate);
+            return _dataAccessService.GetDrawingResultHistory(_initialDate, _finalDate);
+                                    
         }
     }
 }

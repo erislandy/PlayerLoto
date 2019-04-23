@@ -1,4 +1,5 @@
-﻿using DataBaseLocalService.Models;
+﻿using DataBaseLocalService.Helpers;
+using DataBaseLocalService.Models;
 using Newtonsoft.Json;
 using PlayerLoto.Domain;
 using System;
@@ -9,31 +10,48 @@ using System.Text;
 
 namespace DataBaseLocalService.Services
 {
-    public class DataAccessService
+    public class DataAccessService : IDataAccessService
     {
         #region Attributes
 
-        private List<DrawingResult> _drawingResultList;
         private List<int> _numberList;
 
+
         #endregion
-        public DataAccessService()
+
+        #region Services
+
+        IDataAccess _dataAccess;
+
+        #endregion
+        public DataAccessService(IDataAccess dataAccess)
         {
-            _drawingResultList = new List<DrawingResult>();
+            _dataAccess = dataAccess;
 
-            #region Load Data json
+            int count = _dataAccess.GetList<DrawingResultLocal>(false).Count;
 
-            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DataAccessService)).Assembly;
-            Stream stream = assembly.GetManifestResourceStream("DataBaseLocalService.Data.test1.json");
-
-            using (var reader = new StreamReader(stream))
+            if(count == 0)
             {
-                var json = reader.ReadToEnd();
-                _drawingResultList = JsonConvert.DeserializeObject<List<DrawingResult>>(json);
-               
+                #region Load values in SQLite database from  json files
+
+                List<DrawingResult> drawingResultList;
+
+                var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DataAccessService)).Assembly;
+                Stream stream = assembly.GetManifestResourceStream("DataBaseLocalService.Data.test1.json");
+
+                using (var reader = new StreamReader(stream))
+                {
+                    var json = reader.ReadToEnd();
+                    drawingResultList = JsonConvert.DeserializeObject<List<DrawingResult>>(json);
+
+                }
+                List<DrawingResultLocal> drawingResultLocalList = ConvertDrawinToDrawingLocalList(drawingResultList);
+                Save<DrawingResultLocal>(drawingResultLocalList);
+
+                #endregion
+
             }
 
-            #endregion
 
             _numberList = new List<int>()
             {
@@ -42,10 +60,71 @@ namespace DataBaseLocalService.Services
 
         }
 
-        public List<DrawingResult> GetDrawingResultHistory()
+        #region Methods
+        private List<DrawingResultLocal> ConvertDrawinToDrawingLocalList(List<DrawingResult> drawingResultList)
         {
-            return _drawingResultList;
+            List<DrawingResultLocal> list = new List<DrawingResultLocal>();
+            foreach (var drawing in drawingResultList)
+            {
+                list.Add(
+
+                    new DrawingResultLocal()
+                    {
+                        Date = drawing.Date,
+                        Pick3 = drawing.Pick3,
+                        Pick4First = drawing.Pick4First,
+                        Pick4Second = drawing.Pick4Second,
+                        Type = drawing.Type,
+
+                    });
+            }
+            return list;
         }
+        private List<DrawingResult> ConvertDrawinLocalToDrawingList(List<DrawingResultLocal> drawingResultLocalList)
+        {
+            List<DrawingResult> list = new List<DrawingResult>();
+            foreach (var drawingLocal in drawingResultLocalList)
+            {
+                list.Add(
+
+                    new DrawingResult()
+                    {
+                        Date = drawingLocal.Date,
+                        Pick3 = drawingLocal.Pick3,
+                        Pick4First = drawingLocal.Pick4First,
+                        Pick4Second = drawingLocal.Pick4Second,
+                        Type = drawingLocal.Type,
+
+                    });
+            }
+            return list;
+        }
+
+        public List<DrawingResult> GetDrawingResultHistory(DateTime initialDate, DateTime finaldate)
+        {
+            var drawingResultLocalList = _dataAccess.GetList<DrawingResultLocal>(false)
+                       .FindAll(d => d.Date >= initialDate && d.Date <= finaldate);
+            List<DrawingResult> drawingResultList = ConvertDrawinLocalToDrawingList(drawingResultLocalList);
+
+            return drawingResultList;
+        }
+
+      
+
+        #endregion
+
+
+
+        public void Save<T>(List<T> list) where T : class
+        {
+           
+                foreach (var record in list)
+                {
+                    _dataAccess.Insert(record);
+                }
+           
+        }
+
 
         public List<int> GetNumberList()
         {

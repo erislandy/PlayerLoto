@@ -14,7 +14,6 @@ namespace GenerateNumbersModule.ModuleDefinitions
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterInstance(typeof(DataAccessService), new DataAccessService());
             containerRegistry.RegisterForNavigation<GenerateNumbersView>();
         }
     }

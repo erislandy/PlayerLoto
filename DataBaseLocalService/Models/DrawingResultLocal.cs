@@ -6,14 +6,14 @@ using System.Text;
 
 namespace DataBaseLocalService.Models
 {
-    public class DrawingResultLocal : DrawingResult
+    public class DrawingResultLocal
     {
         [PrimaryKey, AutoIncrement]
         public int DrawingResultLocalId { get; set; }
-
-        public override int GetHashCode()
-        {
-            return DrawingResultLocalId;
-        }
+        public DateTime Date { get; set; }
+        public DrawType Type { get; set; }
+        public int Pick3 { get; set; }
+        public int Pick4First { get; set; }
+        public int Pick4Second { get; set; }
     }
 }
