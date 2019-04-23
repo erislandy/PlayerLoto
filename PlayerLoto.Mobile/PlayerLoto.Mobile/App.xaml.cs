@@ -74,6 +74,18 @@ namespace PlayerLoto.Mobile
                     }
                 );
 
+            Type cabalaModule = typeof(CabalaModule.ModuleDefinitions.Module);
+
+            moduleCatalog.AddModule(
+                    new ModuleInfo()
+                    {
+                        ModuleName = cabalaModule.Name,
+                        ModuleType = cabalaModule,
+                        InitializationMode = InitializationMode.WhenAvailable
+
+                    }
+                );
+
             base.ConfigureModuleCatalog(moduleCatalog);
 
         }

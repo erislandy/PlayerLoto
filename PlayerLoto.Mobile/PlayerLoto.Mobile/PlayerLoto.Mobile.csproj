@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\CabalaModule\CabalaModule.csproj" />
     <ProjectReference Include="..\..\DataBaseLocalService\DataBaseLocalService.csproj" />
     <ProjectReference Include="..\..\GenerateNumbersModule\GenerateNumbersModule.csproj" />
     <ProjectReference Include="..\..\QueryDrawingResultsModule\QueryDrawingResultsModule.csproj" />

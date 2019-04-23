@@ -59,6 +59,12 @@ namespace PlayerLoto.Mobile.ViewModels
                     Name = "Jugar",
                     Description ="Guarda tus jugadas, distribuye tu jugada teniendo en cuenta los limitados de distintos bancos",
                     TargetPage="JugarView"
+                },
+                new Option()
+                {
+                    Name = "Cabala",
+                    Description ="Consulta la cabala para interpretar sueños, decifrar adivinanzas o cualquier eventualidad",
+                    TargetPage="CabalaView"
                 }
 
             };
