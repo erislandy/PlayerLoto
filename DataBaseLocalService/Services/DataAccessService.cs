@@ -44,7 +44,7 @@ namespace DataBaseLocalService.Services
                 List<DrawingResult> drawingResultList;
 
                 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DataAccessService)).Assembly;
-                Stream stream = assembly.GetManifestResourceStream("DataBaseLocalService.Data.test1.json");
+                Stream stream = assembly.GetManifestResourceStream("DataBaseLocalService.Data.dr.json");
 
                 using (var reader = new StreamReader(stream))
                 {
